@@ -2156,10 +2156,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./resources/js/bootstrap.js":
-/*!***********************************!*\
-  !*** ./resources/js/bootstrap.js ***!
-  \***********************************/
+/***/ "./resources/js/bootstrap-admin.js":
+/*!*****************************************!*\
+  !*** ./resources/js/bootstrap-admin.js ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
@@ -19651,7 +19651,7 @@ var __webpack_exports__ = {};
 /*!***********************************!*\
   !*** ./resources/js/app-admin.js ***!
   \***********************************/
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./bootstrap-admin */ "./resources/js/bootstrap-admin.js");
 })();
 
 /******/ })()

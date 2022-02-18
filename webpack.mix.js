@@ -12,8 +12,12 @@ const tailwindcss = require('tailwindcss')
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', {}, [
+mix.copyDirectory(
+    'node_modules/@fortawesome/fontawesome-free/webfonts',
+    'public/webfonts'
+)
+    .js('resources/js/app.js', 'public/js')
+    .sass('resources/css/app.scss', 'public/css', {}, [
         tailwindcss('./tailwind.config.js')
     ])
     .options({

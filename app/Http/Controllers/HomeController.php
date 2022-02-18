@@ -2,20 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Show the application dashboard.
      *
@@ -23,6 +14,20 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('frontend.main');
+    }
+
+    public function services()
+    {
+        $services = Service::latest()->paginate(12);
+
+        return view('frontend.services', compact('services'));
+    }
+
+    public function singleService($id)
+    {
+        $data = Service::findOrFail($id);
+
+        return view('frontend.single-service', compact('data'));
     }
 }

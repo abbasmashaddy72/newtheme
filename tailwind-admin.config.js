@@ -1,5 +1,8 @@
 module.exports = {
-    content: ['./resources/views/admin/**/*.blade.php'],
+    content: [
+        './resources/views/admin/**/*.blade.php',
+        './resources/views/auth/**/*.blade.php'
+    ],
     darkMode: 'class',
     theme: {
         fontFamily: {

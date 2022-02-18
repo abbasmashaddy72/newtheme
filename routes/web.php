@@ -8,12 +8,18 @@ use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])
+    ->name('home');
+
+Route::get('/services', [HomeController::class, 'services'])
+    ->name('services');
+
+Route::get('/service/{id}', [HomeController::class, 'singleService'])
+    ->name('single-service');
 
 Route::get('/register', [RegisteredUserController::class, 'create'])
     ->middleware('guest')
@@ -68,6 +74,6 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
     ->middleware('auth')
     ->name('logout');
 
-Route::get('/home', [HomeController::class, 'index'])
+Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware('auth')
-    ->name('home');
+    ->name('dashboard');
