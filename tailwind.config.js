@@ -1,5 +1,8 @@
 module.exports = {
-    content: ['./resources/views/frontend/**/*.blade.php'],
+    content: [
+        './resources/views/frontend/**/*.blade.php',
+        './resources/views/vendor/livewire/**/*.blade.php'
+    ],
     darkMode: 'class',
     theme: {
         extend: {

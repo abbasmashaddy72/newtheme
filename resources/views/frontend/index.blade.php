@@ -13,6 +13,7 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    @livewireStyles
 
     <!-- Switch -->
     <script>
@@ -42,6 +43,7 @@
     </div>
 
     <!-- Main Scripts -->
+    @livewireScripts
     <script src="{{ mix('js/app.js') }}"></script>
 </body>
 
