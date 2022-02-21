@@ -1,5 +1,6 @@
 module.exports = {
     content: [
+        './resources/views/livewire/frontend/**/*.blade.php',
         './resources/views/frontend/**/*.blade.php',
         './resources/views/vendor/livewire/**/*.blade.php'
     ],

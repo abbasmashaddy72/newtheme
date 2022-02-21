@@ -17,6 +17,11 @@ class HomeController extends Controller
         return view('frontend.main');
     }
 
+    public function about()
+    {
+        return view('frontend.about');
+    }
+
     public function services()
     {
         $services = Service::latest()->paginate(12);
