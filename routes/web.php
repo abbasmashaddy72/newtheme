@@ -18,6 +18,12 @@ Route::get('/', [HomeController::class, 'index'])
 Route::get('/about', [HomeController::class, 'about'])
     ->name('about');
 
+Route::get('/blogs', [HomeController::class, 'blogs'])
+    ->name('blogs');
+
+Route::get('/blog/{id}', [HomeController::class, 'singleBlog'])
+    ->name('single-blog');
+
 Route::get('/services', [HomeController::class, 'services'])
     ->name('services');
 

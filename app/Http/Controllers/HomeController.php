@@ -22,6 +22,18 @@ class HomeController extends Controller
         return view('frontend.about');
     }
 
+    public function blogs()
+    {
+        return view('frontend.blogs');
+    }
+
+    public function singleBlog($id)
+    {
+        $data = Service::findOrFail($id);
+
+        return view('frontend.single-blog', compact('data'));
+    }
+
     public function services()
     {
         $services = Service::latest()->paginate(12);
