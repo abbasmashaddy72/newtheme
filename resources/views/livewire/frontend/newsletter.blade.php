@@ -1,4 +1,4 @@
-<div class="px-8 py-8 text-center text-gray-100 bg-gray-800 dark md:py-12 md:px-12" data-aos="fade-down">
+<div class="px-8 py-8 text-center text-gray-100 bg-gray-800 dark" data-aos="fade-down">
     <div class="mb-6 text-xl font-medium">Sign up to our newsletter for more articles like this.
     </div>
     <form>

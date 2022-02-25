@@ -30,50 +30,31 @@
 
                     <!-- Content -->
                     <div class="mb-8 text-center md:col-span-7 lg:col-span-7 md:mb-0 md:text-left">
-                        <h1 class="mb-4 font-extrabold h1 lg:text-6xl font-red-hat-display" data-aos="fade-down">Dr. Ayesha
-                            Khaliq</h1>
-                        <p class="text-xl text-gray-600 dark:text-gray-400" data-aos="fade-down" data-aos-delay="150">Lorem
-                            ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, similique alias? Eligendi
-                            provident eos explicabo nihil aspernatur, magni cumque repellat odit dicta aut sequi similique.
-                            Dolore alias modi aspernatur ab?</p>
-                        <!-- CTA form -->
-                        <form class="mt-8" data-aos="fade-down" data-aos-delay="300">
-                            <div class="flex flex-col justify-center max-w-sm mx-auto sm:flex-row sm:max-w-md md:mx-0">
-                                {{-- <input type="tel" class="w-full mb-2 form-input sm:mb-0 sm:mr-2" placeholder="Phone number"
-                                    aria-label="Phone number" /> --}}
-                                <a class="text-white bg-teal-500 btn hover:bg-teal-400 shrink-0" href="#0">Book
-                                    Appointment</a>
-                            </div>
-                            <!-- Success message -->
-                            <!-- <p class="mt-2 text-sm text-center opacity-75 md:text-left">Thanks for subscribing!</p> -->
+                        <h1 class="mb-4 font-extrabold h1 lg:text-5xl font-red-hat-display" data-aos="fade-down">
+                            Dr. {{ $name }}</h1>
+                        <h2 class="mb-4 font-extrabold h2 lg:text-3xl font-red-hat-display" data-aos="fade-down">
+                            {{ $department }}</h2>
+                        <p class="text-xl text-gray-600 dark:text-gray-400" data-aos="fade-down" data-aos-delay="150">
+                            {{ $about }}</p>
+                        <div class="flex flex-col justify-center max-w-sm mx-auto mt-8 sm:flex-row sm:max-w-md md:mx-0"
+                            data-aos="fade-down" data-aos-delay="300">
+                            <a class="text-white bg-teal-500 btn hover:bg-teal-400 shrink-0" href="#0">Book
+                                Appointment</a>
+                        </div>
                         </form>
                         <ul class="max-w-sm mx-auto mt-8 -mb-2 text-gray-600 sm:max-w-md md:max-w-none dark:text-gray-400"
                             data-aos="fade-down" data-aos-delay="450">
-                            <div class="mb-2 text-xl font-bold font-red-hat-display">Why Doctor Ayesha Khaliq?</div>
-                            <li class="flex items-center mb-2">
-                                <svg class="w-3 h-3 mr-2 text-teal-400 fill-current shrink-0" viewBox="0 0 12 12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                                </svg>
-                                <span>Lorem ipsum is placeholder text commonly.</span>
-                            </li>
-                            <li class="flex items-center mb-2">
-                                <svg class="w-3 h-3 mr-2 text-teal-400 fill-current shrink-0" viewBox="0 0 12 12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                                </svg>
-                                <span>Excepteur sint occaecat cupidatat.</span>
-                            </li>
-                            <li class="flex items-center mb-2">
-                                <svg class="w-3 h-3 mr-2 text-teal-400 fill-current shrink-0" viewBox="0 0 12 12"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
-                                </svg>
-                                <span>Lorem ipsum is placeholder text commonly.</span>
-                            </li>
+                            <div class="mb-2 text-xl font-bold font-red-hat-display">Why Doctor {{ $name }}?</div>
+                            @foreach ($why_points as $item)
+                                <li class="flex items-center mb-2">
+                                    <svg class="w-3 h-3 mr-2 text-teal-400 fill-current shrink-0" viewBox="0 0 12 12"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.28 2.28L3.989 8.575 1.695 6.28A1 1 0 00.28 7.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 2.28z" />
+                                    </svg>
+                                    <span>{{ $item }}</span>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
 
@@ -102,12 +83,12 @@
                                 </defs>
                             </svg>
                             <!-- Image inside mockup size: 290x624px (or 580x1248px for Retina devices) -->
-                            <img class="absolute" src="{{ asset('images/mockup-image-01.jpg') }}" width="290"
-                                height="624" style="max-width: 84.33%;" alt="Features illustration" />
+                            {{-- <img class="absolute" src="{{ asset('images/mockup-image-01.jpg') }}" width="290"
+                                height="624" style="max-width: 84.33%;" alt="Features illustration" /> --}}
                             <!-- iPhone mockup -->
-                            <img class="relative h-auto max-w-full mx-auto pointer-events-none md:mr-0 md:max-w-none"
-                                src="{{ asset('images/iphone-mockup.png') }}" width="344" height="674" alt="iPhone mockup"
-                                aria-hidden="true" />
+                            <img class="relative h-auto max-w-full mx-auto pointer-events-none rounded-xl md:mr-0 md:max-w-none"
+                                src="{{ asset('images/' . $hero_img . '') }}" width="344" height="674"
+                                alt="{{ $name }}" aria-hidden="true" />
                             <!-- Play button -->
                             <a class="absolute transition duration-150 ease-in-out cursor-pointer hover:opacity-75"
                                 @click.prevent="modalExpanded = true" aria-controls="modal">
@@ -135,8 +116,9 @@
                             <div class="w-full max-w-6xl max-h-full overflow-auto bg-white"
                                 @click.outside="modalExpanded = false" @keydown.escape.window="modalExpanded = false">
                                 <div class="relative pb-9/16">
-                                    <iframe class="absolute w-full h-full" src="https://www.youtube.com/embed/qz4F1uMzihY"
-                                        title="Video" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                                    <iframe class="absolute w-full h-full"
+                                        src="https://www.youtube.com/embed/{{ $hero_video }}" title="Video"
+                                        webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                                 </div>
                             </div>
                         </div>
@@ -147,6 +129,7 @@
             </div>
         </div>
     </section>
+
     <section class="relative">
         <!-- Background gradient (light version only) -->
         <div class="absolute bottom-0 left-0 right-0 pointer-events-none h-128 bg-gradient-to-t from-gray-100 to-white -z-10 dark:hidden"
@@ -155,39 +138,28 @@
         <div class="relative max-w-6xl px-4 mx-auto sm:px-6">
             <div class="pb-12 md:pb-20">
                 <div class="grid grid-cols-2 gap-4 text-center lg:gap-6 md:grid-cols-4" data-aos-id-stats>
-                    <!-- 1st item -->
-                    <div class="px-1 py-8 bg-white shadow-2xl dark:bg-gray-800" data-aos="fade-down"
-                        data-aos-anchor="[data-aos-id-stats]">
-                        <div class="mb-1 text-3xl font-extrabold tracking-tighter font-red-hat-display">2.4M</div>
-                        <div class="text-gray-600 dark:text-gray-400">Years of Experience</div>
-                    </div>
-                    <!-- 2nd item -->
-                    <div class="px-1 py-8 bg-white shadow-2xl dark:bg-gray-800" data-aos="fade-down"
-                        data-aos-anchor="[data-aos-id-stats]" data-aos-delay="100">
-                        <div class="mb-1 text-3xl font-extrabold tracking-tighter font-red-hat-display">7M</div>
-                        <div class="text-gray-600 dark:text-gray-400">Surgeries Done</div>
-                    </div>
-                    <!-- 3rd item -->
-                    <div class="px-1 py-8 bg-white shadow-2xl dark:bg-gray-800" data-aos="fade-down"
-                        data-aos-anchor="[data-aos-id-stats]" data-aos-delay="200">
-                        <div class="mb-1 text-3xl font-extrabold tracking-tighter font-red-hat-display">7.4%</div>
-                        <div class="text-gray-600 dark:text-gray-400">Success Stories</div>
-                    </div>
-                    <!-- 4th item -->
-                    <div class="px-1 py-8 bg-white shadow-2xl dark:bg-gray-800" data-aos="fade-down"
-                        data-aos-anchor="[data-aos-id-stats]" data-aos-delay="300">
-                        <div class="mb-1 text-3xl font-extrabold tracking-tighter font-red-hat-display">49K</div>
-                        <div class="text-gray-600 dark:text-gray-400">No. of Cases</div>
-                    </div>
+                    <!-- Single item -->
+                    @foreach ($counts as $item)
+                        <div class="px-1 py-8 bg-white shadow-2xl dark:bg-gray-800" data-aos="fade-down"
+                            data-aos-anchor="[data-aos-id-stats]">
+                            <div class="mb-1 text-3xl font-extrabold tracking-tighter font-red-hat-display">
+                                {{ $item->count }}</div>
+                            <div class="text-gray-600 dark:text-gray-400">{{ $item->title }}</div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Services -->
     <section class="relative">
         <div class="max-w-6xl px-4 pt-16 mx-auto sm:px-6">
             @livewire('frontend.services')
         </div>
     </section>
+
+    <!-- Testimonials -->
     <section class="border-t border-transparent dark:border-gray-800">
         <div class="py-12 md:py-20">
 
@@ -196,7 +168,7 @@
                 <!-- Section header -->
                 <div class="max-w-3xl pb-12 mx-auto text-center md:pb-16">
                     <h1 class="mb-4 h2 font-red-hat-display">Testimonials</h1>
-                    <p class="text-xl text-gray-600 dark:text-gray-400">Patient Testimonials</p>
+                    <p class="text-xl text-gray-600 dark:text-gray-400">{{ $testimonials_excerpt }}</p>
                 </div>
 
             </div>
@@ -207,60 +179,48 @@
             <div class="carousel swiper-container">
                 <div class="swiper-wrapper">
                     <!-- Carousel items -->
-                    <div class="w-full p-4 rounded-lg sm:w-1/2 md:w-1/2 xl:w-1/4 swiper-slide">
-                        <a href=""
-                            class="block overflow-hidden rounded-lg shadow-md c-card hover:shadow-xl dark:border-white dark:border-2">
-                            <div class="relative pb-48 overflow-hidden">
-                                <img class="absolute inset-0 object-cover w-full h-full"
-                                    src="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
-                                    alt="">
-                            </div>
-                            <div class="p-4">
-                                <span
-                                    class="inline-block px-2 py-1 text-xs font-semibold leading-none tracking-wide text-orange-800 uppercase bg-orange-200 rounded-full">Highlight</span>
-                                <h2 class="mt-2 mb-2 font-bold">Purus Ullamcorper Inceptos Nibh</h2>
-                                <p class="text-sm">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec
-                                    ullamcorper nulla non metus auctor fringilla.</p>
-                            </div>
-                            <div class="p-4 text-xs text-gray-700 border-t border-b">
-                                <span class="flex items-center mb-1 dark:text-gray-100">
-                                    <i class="mr-2 text-gray-900 far fa-clock fa-fw dark:text-gray-100"></i> 3 Tage
-                                </span>
-                            </div>
-                            <div class="flex items-center p-4 text-sm text-gray-600">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                    class="w-4 h-4 text-yellow-500 fill-current">
-                                    <path
-                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
-                                    </path>
-                                </svg>
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                    class="w-4 h-4 text-yellow-500 fill-current">
-                                    <path
-                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
-                                    </path>
-                                </svg>
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                    class="w-4 h-4 text-yellow-500 fill-current">
-                                    <path
-                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
-                                    </path>
-                                </svg>
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                    class="w-4 h-4 text-yellow-500 fill-current">
-                                    <path
-                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
-                                    </path>
-                                </svg>
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
-                                    class="w-4 h-4 text-gray-400 fill-current dark:text-gray-100">
-                                    <path
-                                        d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
-                                    </path>
-                                </svg>
-                            </div>
-                        </a>
-                    </div>
+                    @foreach ($testimonials as $item)
+                        <div class="w-full p-4 rounded-lg sm:w-1/2 md:w-1/2 xl:w-1/4 swiper-slide">
+                            <a href=""
+                                class="block overflow-hidden rounded-lg shadow-md c-card hover:shadow-xl dark:border-white dark:border-2">
+                                <div class="relative pb-48 overflow-hidden">
+                                    <img class="absolute inset-0 object-cover w-full h-full"
+                                        src="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                                        alt="">
+                                </div>
+                                <div class="p-4">
+                                    <span
+                                        class="inline-block px-2 py-1 text-xs font-semibold leading-none tracking-wide text-orange-800 uppercase bg-orange-200 rounded-full">{{ $item->service->title }}</span>
+                                    <h2 class="mt-2 mb-2 font-bold">{{ $item->name }}</h2>
+                                    <p class="text-sm">{{ $item->review }}</p>
+                                </div>
+                                <div class="p-4 text-xs text-gray-700 border-t border-b">
+                                    <span class="flex items-center mb-1 dark:text-gray-100">
+                                        <i class="mr-2 text-gray-900 far fa-clock fa-fw dark:text-gray-100"></i>
+                                        {{ $item->created_at->diffForHumans() }}
+                                    </span>
+                                </div>
+                                <div class="flex items-center p-4 text-sm text-gray-600">
+                                    @for ($i = 1; $i <= $item->stars; $i++)
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            class="w-4 h-4 text-yellow-500 fill-current">
+                                            <path
+                                                d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                            </path>
+                                        </svg>
+                                    @endfor
+                                    @for ($i = 1; $i <= 5 - $item->stars; $i++)
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                            class="w-4 h-4 text-gray-400 fill-current dark:text-gray-100">
+                                            <path
+                                                d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                                            </path>
+                                        </svg>
+                                    @endfor
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
                 </div>
             </div>
 
@@ -288,6 +248,8 @@
 
         </div>
     </section>
+
+    <!-- Sign Up -->
     <section>
         <div class="max-w-6xl px-4 mx-auto sm:px-6">
 
