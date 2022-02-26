@@ -1,7 +1,11 @@
 module.exports = {
     content: [
         './resources/views/admin/**/*.blade.php',
-        './resources/views/auth/**/*.blade.php'
+        './resources/views/auth/**/*.blade.php',
+        './resources/views/vendor/form-components/tailwind-3/**/*.blade.php',
+        './resources/views/components/**/*.blade.php',
+        './resources/views/layouts/admin/**/*.blade.php',
+        './resources/views/layouts/app.blade.php'
     ],
     darkMode: 'class',
     theme: {

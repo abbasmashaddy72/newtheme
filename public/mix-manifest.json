@@ -1,8 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
     "/js/app-admin.js": "/js/app-admin.js",
-    "/css/app.css": "/css/app.css",
     "/css/app-admin.css": "/css/app-admin.css",
+    "/css/app.css": "/css/app.css",
     "/webfonts/fa-brands-400.ttf": "/webfonts/fa-brands-400.ttf",
     "/webfonts/fa-brands-400.woff2": "/webfonts/fa-brands-400.woff2",
     "/webfonts/fa-regular-400.ttf": "/webfonts/fa-regular-400.ttf",

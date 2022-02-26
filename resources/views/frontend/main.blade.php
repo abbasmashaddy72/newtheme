@@ -185,8 +185,7 @@
                                 class="block overflow-hidden rounded-lg shadow-md c-card hover:shadow-xl dark:border-white dark:border-2">
                                 <div class="relative pb-48 overflow-hidden">
                                     <img class="absolute inset-0 object-cover w-full h-full"
-                                        src="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
-                                        alt="">
+                                        src="{{ asset('images/' . $item->image . '') }}" alt="">
                                 </div>
                                 <div class="p-4">
                                     <span

@@ -16,8 +16,19 @@ class BlogFactory extends Factory
      */
     public function definition()
     {
+        $paragraphs = $this->faker->paragraphs(6, false);
+        $title = $this->faker->realText(50);
+        $description = "<h1>{$title}</h1>";
+        foreach ($paragraphs as $para) {
+            $description .= "<p>{$para}</p>";
+        }
+
         return [
-            //
+            'title' => $this->faker->name(),
+            'image' => null,
+            'tags' => null,
+            'excerpt' => $this->faker->paragraph(rand(1, 2)),
+            'description' => $description,
         ];
     }
 }

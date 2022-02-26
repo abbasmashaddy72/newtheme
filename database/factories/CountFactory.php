@@ -17,7 +17,8 @@ class CountFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->jobTitle(),
+            'count' => $this->faker->numberBetween(50, 5000),
         ];
     }
 }

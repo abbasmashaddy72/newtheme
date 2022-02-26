@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Review;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ReviewSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,6 +15,6 @@ class ReviewSeeder extends Seeder
      */
     public function run()
     {
-        Review::factory()->count(rand(220, 350))->create();
+        User::factory()->count(rand(220, 350))->create();
     }
 }

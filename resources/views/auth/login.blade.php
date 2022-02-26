@@ -14,39 +14,27 @@
                         <!-- Session Status -->
                         <x-auth-session-status class="mb-4" :status="session('status')" />
 
-                        <!-- Validation Errors -->
-                        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
-                            {{-- <div class="flex flex-wrap">
+                            <div class="flex flex-wrap">
                                 <!-- Email Address -->
                                 <div class="flex-auto w-full">
                                     <div class="mb-4">
-                                        <x-label for="email" :value="__('Email')" />
-
-                                        <x-input id="email" class="block w-full mt-1" type="email" name="email"
-                                            :value="old('email')" required autofocus />
+                                        <x-form-input name="email" label="Email" />
                                     </div>
                                 </div>
 
                                 <!-- Password -->
                                 <div class="flex-auto w-full">
                                     <div class="mb-4">
-                                        <x-label for="password" :value="__('Password')" />
-
-                                        <x-input id="password" class="block w-full mt-1" type="password" name="password"
-                                            required autocomplete="current-password" />
+                                        <x-form-input name="password" label="Password" type="password" />
                                     </div>
                                 </div>
 
                                 <!-- Remember Me & Forgot Password -->
                                 <div class="flex justify-between flex-auto w-full">
                                     <div class="block pl-6 mb-4">
-                                        <input id="remember_me" type="checkbox" name="remember"
-                                            class="float-left w-4 h-4 mt-1 -ml-6 bg-center bg-no-repeat border border-blue-500 rounded">
-                                        <label class="text-gray-600 form-check-label"
-                                            for="remember_me">{{ __('Remember me') }}</label>
+                                        <x-form-checkbox name="remember_me" label="Remember me" />
                                     </div>
                                     @if (Route::has('password.request'))
                                         <a class="text-blue-500 hover:text-blue-600"
@@ -55,13 +43,11 @@
                                         </a>
                                     @endif
                                 </div>
-                            </div> --}}
+                            </div>
 
-                            {{-- <div class="flex justify-center">
-                                <x-submit-button>
-                                    {{ __('Log in') }}
-                                </x-submit-button>
-                            </div> --}}
+                            <div class="flex justify-center">
+                                <x-form-submit />
+                            </div>
                         </form>
                     </div>
                 </div>

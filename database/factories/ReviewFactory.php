@@ -20,6 +20,7 @@ class ReviewFactory extends Factory
         return [
             'service_id' => Service::pluck('id')[$this->faker->numberBetween(1, Service::count() - 1)],
             'name' => $this->faker->name(),
+            'image' => 'related-post-0' . $this->faker->numberBetween(1, 6) . '.jpg',
             'stars' => rand(0, 5),
             'review' => $this->faker->realText(100, 3),
         ];

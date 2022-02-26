@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Count;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +15,6 @@ class CountSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Count::factory()->count(4)->create();
     }
 }

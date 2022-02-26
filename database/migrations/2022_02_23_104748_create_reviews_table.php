@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('service_id')->constrained('services')->onUpdate('cascade')->onDelete('cascade');
             $table->string('name');
+            $table->text('image');
             $table->longText('review');
             $table->integer('stars');
             $table->timestamps();

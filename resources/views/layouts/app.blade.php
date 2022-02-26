@@ -1,51 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    <!-- Livewire styles -->
+    <livewire:styles />
+
     <!-- Styles -->
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ mix('css/app-admin.css') }}">
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+
+    </style>
 </head>
-<body class="bg-gray-100 h-screen antialiased leading-none font-sans">
-    <div id="app">
-        <header class="bg-blue-900 py-6">
-            <div class="container mx-auto flex justify-between items-center px-6">
-                <div>
-                    <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
-                <nav class="space-x-4 text-gray-300 text-sm sm:text-base">
-                    @guest
-                        <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        @if (Route::has('register'))
-                            <a class="no-underline hover:underline" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        @endif
-                    @else
-                        <span>{{ Auth::user()->name }}</span>
 
-                        <a href="{{ route('logout') }}"
-                           class="no-underline hover:underline"
-                           onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
-                            {{ csrf_field() }}
-                        </form>
-                    @endguest
-                </nav>
+<body class="overflow-x-hidden bg-body dark:bg-dark-bg">
+    @include('admin.partials.loader')
+
+    <div>
+        @include('layouts.admin.sidebar')
+        <main class="flex flex-col justify-between h-screen main-content" x-data="{ data: true }">
+            <div class="relative">
+                @include('layouts.admin.navbar')
             </div>
-        </header>
-
-        @yield('content')
+            <div class="p-6 py-0 mt-4 mb-auto lg:p-10 lg:py-0 container-fluid">
+                <div class="flex flex-wrap">
+                    {{ $slot }}
+                </div>
+            </div>
+            @include('layouts.admin.footer')
+        </main>
     </div>
+    <!-- Scripts -->
+    @livewireScripts
+    <script src="{{ asset('js/theme/libs.min.js') }}"></script>
+    <script src="{{ asset('js/theme/external.min.js') }}"></script>
+    <script src="{{ asset('js/theme/hope-ui.js') }}"></script>
+    <script src="{{ mix('js/app-admin.js') }}"></script>
+    @stack('scripts')
 </body>
+
 </html>
