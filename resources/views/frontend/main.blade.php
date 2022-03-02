@@ -191,7 +191,7 @@
                                     <span
                                         class="inline-block px-2 py-1 text-xs font-semibold leading-none tracking-wide text-orange-800 uppercase bg-orange-200 rounded-full">{{ $item->service->title }}</span>
                                     <h2 class="mt-2 mb-2 font-bold">{{ $item->name }}</h2>
-                                    <p class="text-sm">{{ $item->review }}</p>
+                                    <p class="text-sm">{{ $item->message }}</p>
                                 </div>
                                 <div class="p-4 text-xs text-gray-700 border-t border-b">
                                     <span class="flex items-center mb-1 dark:text-gray-100">

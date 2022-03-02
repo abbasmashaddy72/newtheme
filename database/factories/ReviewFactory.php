@@ -22,7 +22,7 @@ class ReviewFactory extends Factory
             'name' => $this->faker->name(),
             'image' => 'related-post-0' . $this->faker->numberBetween(1, 6) . '.jpg',
             'stars' => rand(0, 5),
-            'review' => $this->faker->realText(100, 3),
+            'message' => $this->faker->realText(100, 3),
         ];
     }
 }

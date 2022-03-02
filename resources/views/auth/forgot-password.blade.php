@@ -36,9 +36,9 @@
                             </div>
 
                             <div class="flex justify-center">
-                                <x-submit-button>
+                                <x-admin.submit-button>
                                     {{ __('Email Password Reset Link') }}
-                                </x-submit-button>
+                                </x-admin.submit-button>
                             </div>
                         </form>
                     </div>

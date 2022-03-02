@@ -8,6 +8,11 @@ use App\Models\Blog;
 
 class BlogController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Service');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +20,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.pages.blog.index');
     }
 
     /**
@@ -25,7 +30,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.blog.create');
     }
 
     /**
@@ -47,7 +52,9 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        //
+        $blog = $blog->id;
+
+        return view('admin.pages.blog.show', compact('blog'));
     }
 
     /**
@@ -58,7 +65,9 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        //
+        $blog = $blog->id;
+
+        return view('admin.pages.blog.edit', compact('blog'));
     }
 
     /**

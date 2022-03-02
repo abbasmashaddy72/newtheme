@@ -8,6 +8,11 @@ use App\Models\Service;
 
 class ServiceController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Service');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +20,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.pages.service.index');
     }
 
     /**
@@ -25,7 +30,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.service.create');
     }
 
     /**
@@ -34,7 +39,7 @@ class ServiceController extends Controller
      * @param  \App\Http\Requests\StoreServiceRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreServiceRequest $request)
+    public function store()
     {
         //
     }
@@ -47,7 +52,9 @@ class ServiceController extends Controller
      */
     public function show(Service $service)
     {
-        //
+        $service = $service->id;
+
+        return view('admin.pages.service.show', compact('service'));
     }
 
     /**
@@ -58,7 +65,9 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
-        //
+        $service = $service->id;
+
+        return view('admin.pages.service.edit', compact('service'));
     }
 
     /**
@@ -68,7 +77,7 @@ class ServiceController extends Controller
      * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateServiceRequest $request, Service $service)
+    public function update(Service $service)
     {
         //
     }

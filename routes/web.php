@@ -86,3 +86,10 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware('auth')
     ->name('dashboard');
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'App\Http\Controllers'], function () {
+    Route::resource('blog', 'BlogController');
+    Route::resource('review', 'ReviewController');
+    Route::resource('service', 'ServiceController');
+    Route::resource('static-option', 'StaticOptionController');
+});

@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Service;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -24,6 +25,7 @@ class BlogFactory extends Factory
         }
 
         return [
+            'service_id' => Service::pluck('id')[$this->faker->numberBetween(1, Service::count() - 1)],
             'title' => $this->faker->name(),
             'image' => null,
             'tags' => null,

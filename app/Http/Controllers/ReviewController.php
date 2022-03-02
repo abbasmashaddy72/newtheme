@@ -6,6 +6,11 @@ use App\Models\Review;
 
 class ReviewController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('title', 'Service');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +18,7 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.pages.review.index');
     }
 
     /**
@@ -23,7 +28,7 @@ class ReviewController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.review.create');
     }
 
     /**
@@ -45,7 +50,9 @@ class ReviewController extends Controller
      */
     public function show(Review $review)
     {
-        //
+        $review = $review->id;
+
+        return view('admin.pages.review.show', compact('review'));
     }
 
     /**
@@ -56,7 +63,9 @@ class ReviewController extends Controller
      */
     public function edit(Review $review)
     {
-        //
+        $review = $review->id;
+
+        return view('admin.pages.review.edit', compact('review'));
     }
 
     /**
