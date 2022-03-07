@@ -8,7 +8,7 @@ class ReviewController extends Controller
 {
     public function __construct()
     {
-        view()->share('title', 'Service');
+        view()->share('title', 'Review');
     }
 
     /**

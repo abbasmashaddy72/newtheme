@@ -3,5 +3,5 @@
 
 <x-form-textarea name="excerpt" label="Excerpt" required />
 
-<x-form-textarea name="description" label="Description" required />
+<x-admin.form.ckeditor id="bodyen" lang="EN" name="description" label="Description" required />
 @endwire

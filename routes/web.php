@@ -92,4 +92,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'App\H
     Route::resource('review', 'ReviewController');
     Route::resource('service', 'ServiceController');
     Route::resource('static-option', 'StaticOptionController');
+    Route::post('image_upload', 'Miscellaneous@image_upload')->name('ckeditor.upload');
 });

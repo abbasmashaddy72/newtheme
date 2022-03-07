@@ -10,9 +10,6 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
-    <!-- Livewire styles -->
-    <livewire:styles />
-
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app-admin.css') }}">
     <style>
@@ -21,6 +18,9 @@
         }
 
     </style>
+    @stack('styles')
+    <!-- Livewire styles -->
+    <livewire:styles />
 </head>
 
 <body class="overflow-x-hidden bg-body dark:bg-dark-bg">
@@ -42,11 +42,19 @@
     </div>
     <!-- Scripts -->
     @livewireScripts
+    @stack('scripts')
     <script src="{{ asset('js/theme/libs.min.js') }}"></script>
     <script src="{{ asset('js/theme/external.min.js') }}"></script>
     <script src="{{ asset('js/theme/hope-ui.js') }}"></script>
     <script src="{{ mix('js/app-admin.js') }}"></script>
-    @stack('scripts')
+    @if (getenv('APP_ENV') === 'local')
+        <script id="__bs_script__">
+            //<![CDATA[
+            document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.6'><\/script>"
+                .replace("HOST", location.hostname));
+            //]]>
+        </script>
+    @endif
 </body>
 
 </html>
