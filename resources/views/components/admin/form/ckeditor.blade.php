@@ -9,6 +9,7 @@
             <textarea id="{{ $id }}" wire:model="{{ $name }}"></textarea>
         </div>
     </label>
+    <x-form-errors :name="$name" />
 </div>
 
 @push('scripts')

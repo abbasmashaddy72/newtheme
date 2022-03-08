@@ -4,15 +4,20 @@ namespace App\Http\Livewire\Admin\Service;
 
 use App\Models\Service;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class Edit extends Component
 {
+    use WithFileUploads;
+
     public $service;
 
     public $title;
     public $image;
     public $excerpt;
     public $description;
+
+    public $isUploaded = false;
 
     public function mount($service)
     {
@@ -33,11 +38,14 @@ class Edit extends Component
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
+
+        $this->isUploaded = true;
     }
 
     public function submit()
     {
         $validatedData = $this->validate();
+        $validatedData['image'] = $this->image->store('services_images');
 
         Service::where('id', $this->service)->update($validatedData);
 

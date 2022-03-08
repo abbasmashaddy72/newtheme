@@ -16,6 +16,8 @@ class Show extends Component
     public $excerpt;
     public $description;
 
+    public $isUploaded = false;
+
     public function mount($blog)
     {
         $data = Blog::findOrFail($blog);

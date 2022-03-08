@@ -4,9 +4,12 @@ namespace App\Http\Livewire\Admin\Review;
 
 use App\Models\Review;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class Edit extends Component
 {
+    use WithFileUploads;
+
     public $review;
 
     public $service_id;
@@ -14,6 +17,8 @@ class Edit extends Component
     public $image;
     public $message;
     public $stars;
+
+    public $isUploaded = false;
 
     public function mount($review)
     {
@@ -36,11 +41,14 @@ class Edit extends Component
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
+
+        $this->isUploaded = true;
     }
 
     public function submit()
     {
         $validatedData = $this->validate();
+        $validatedData['image'] = $this->image->store('review_image');
 
         Review::where('id', $this->review)->update($validatedData);
 

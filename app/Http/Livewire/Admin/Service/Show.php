@@ -15,6 +15,8 @@ class Show extends Component
     public $excerpt;
     public $description;
 
+    public $isUploaded = false;
+
     public function mount($service)
     {
         $data = Service::findOrFail($service);

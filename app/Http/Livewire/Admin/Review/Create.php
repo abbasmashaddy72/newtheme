@@ -4,14 +4,19 @@ namespace App\Http\Livewire\Admin\Review;
 
 use App\Models\Review;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class Create extends Component
 {
+    use WithFileUploads;
+
     public $service_id;
     public $name;
     public $image;
     public $message;
     public $stars;
+
+    public $isUploaded = false;
 
     protected $rules = [
         'service_id' => '',
@@ -24,11 +29,14 @@ class Create extends Component
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
+
+        $this->isUploaded = true;
     }
 
     public function submit()
     {
         $validatedData = $this->validate();
+        $validatedData['image'] = $this->image->store('review_image');
 
         Review::create($validatedData);
 

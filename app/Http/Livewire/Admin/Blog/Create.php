@@ -4,15 +4,20 @@ namespace App\Http\Livewire\Admin\Blog;
 
 use App\Models\Blog;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class Create extends Component
 {
+    use WithFileUploads;
+
     public $service_id;
     public $title;
     public $image;
     public $tags;
     public $excerpt;
     public $description;
+
+    public $isUploaded = false;
 
     protected $rules = [
         'service_id' => '',
@@ -26,11 +31,14 @@ class Create extends Component
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
+
+        $this->isUploaded = true;
     }
 
     public function submit()
     {
         $validatedData = $this->validate();
+        $validatedData['image'] = $this->image->store('blog_images');
 
         Blog::create($validatedData);
 

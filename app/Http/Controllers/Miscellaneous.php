@@ -14,7 +14,6 @@ class Miscellaneous extends Controller
         $blog->exists = true;
         $image = $blog->addMediaFromRequest('upload')->toMediaCollection('images');
 
-
         return response()->json([
             'url' => $image->getUrl('thumb')
         ]);

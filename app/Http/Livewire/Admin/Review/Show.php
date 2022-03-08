@@ -15,6 +15,8 @@ class Show extends Component
     public $message;
     public $stars;
 
+    public $isUploaded = false;
+
     public function mount($review)
     {
         $data = Review::findOrFail($review);
