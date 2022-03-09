@@ -27,7 +27,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="{{ asset('images/' . $item->image . '') }}" class="object-cover w-full rounded-lg h-96"
+                    <img src="{{ asset('storage/' . $item->image . '') }}" class="object-cover w-full rounded-lg h-96"
                         alt="{{ $item->title }}" />
                 </a>
             </div>

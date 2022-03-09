@@ -24,6 +24,11 @@ class Edit extends Component
     public $services_excerpt;
     public $testimonials;
     public $counts;
+    public $twitter;
+    public $facebook;
+    public $instagram;
+    public $linkedin;
+    public $google_business;
 
     public $isUploaded = false;
     public $image = false;
@@ -40,6 +45,11 @@ class Edit extends Component
         $this->hero_video = Helper::get_static_option('hero_video');
         $this->testimonials_excerpt = Helper::get_static_option('testimonials_excerpt');
         $this->services_excerpt = Helper::get_static_option('services_excerpt');
+        $this->twitter = Helper::get_static_option('twitter');
+        $this->facebook = Helper::get_static_option('facebook');
+        $this->instagram = Helper::get_static_option('instagram');
+        $this->linkedin = Helper::get_static_option('linkedin');
+        $this->google_business = Helper::get_static_option('google_business');
     }
 
     protected $rules = [
@@ -53,6 +63,11 @@ class Edit extends Component
         'hero_video' => '',
         'testimonials_excerpt' => '',
         'services_excerpt' => '',
+        'twitter' => '',
+        'facebook' => '',
+        'instagram' => '',
+        'linkedin' => '',
+        'google_business' => '',
     ];
 
     public function updated($propertyName)

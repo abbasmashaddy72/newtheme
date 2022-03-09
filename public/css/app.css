@@ -11124,6 +11124,11 @@ readers do not read off random characters that represent icons */
   color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
+.text-red-500{
+  --tw-text-opacity: 1;
+  color: rgb(192 50 33 / var(--tw-text-opacity));
+}
+
 .antialiased{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

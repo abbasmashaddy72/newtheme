@@ -6,7 +6,7 @@
 
                 <!-- Section header -->
                 <div class="max-w-3xl pb-12 mx-auto text-center md:pb-20">
-                    <h2 class="mb-4 h2 font-red-hat-display">Terms & COnditions</h2>
+                    <h2 class="mb-4 h2 font-red-hat-display">Terms & Conditions</h2>
                     <p class="text-xl text-gray-600 dark:text-gray-400">Please Read Carefully</p>
                 </div>
 

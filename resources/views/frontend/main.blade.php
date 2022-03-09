@@ -81,7 +81,7 @@
                                     </radialGradient>
                                 </defs>
                             </svg>
-                            <!-- Image inside mockup size: 290x624px (or 580x1248px for Retina devices) -->
+                            <!-- Image inside mockup size: 290x624px (or 580x1248px for >Retina devices) -->
                             {{-- <img class="absolute" src="{{ asset('images/mockup-image-01.jpg') }}" width="290"
                                 height="624" style="max-width: 84.33%;" alt="Features illustration" /> --}}
                             <!-- iPhone mockup -->

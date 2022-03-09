@@ -10,6 +10,15 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    public function __construct()
+    {
+        view()->share('twitter', Helper::get_static_option('twitter'));
+        view()->share('facebook', Helper::get_static_option('facebook'));
+        view()->share('instagram', Helper::get_static_option('instagram'));
+        view()->share('linkedin', Helper::get_static_option('linkedin'));
+        view()->share('google_business', Helper::get_static_option('google_business'));
+    }
+
     /**
      * Show the application dashboard.
      *
@@ -40,7 +49,7 @@ class HomeController extends Controller
             'hero_video',
             'testimonials_excerpt',
             'testimonials',
-            'counts'
+            'counts',
         ));
     }
 
