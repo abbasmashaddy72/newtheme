@@ -1879,6 +1879,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(52 58 64 / var(--tw-border-opacity));
 }
+.border-red-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(192 50 33 / var(--tw-border-opacity));
+}
 .bg-body{
   --tw-bg-opacity: 1;
   background-color: rgb(245 247 254 / var(--tw-bg-opacity));
@@ -1938,6 +1942,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-gray-700{
   --tw-bg-opacity: 1;
   background-color: rgb(73 80 87 / var(--tw-bg-opacity));
+}
+.bg-red-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(192 50 33 / var(--tw-bg-opacity));
 }
 .bg-opacity-20{
   --tw-bg-opacity: 0.2;

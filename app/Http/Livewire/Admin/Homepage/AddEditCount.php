@@ -64,4 +64,9 @@ class AddEditCount extends Component
 
         session()->flash('message', 'Contact Has Been Created Successfully.');
     }
+
+    public function delete($id)
+    {
+        Count::find($id)->delete();
+    }
 }
