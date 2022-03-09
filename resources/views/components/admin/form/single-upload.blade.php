@@ -1,14 +1,29 @@
-@if ($this->image)
-    <div class="my-4">
-        <div class="mb-2">
-            <label class="block">
-                <x-form-label label="Uploaded Image Preview" />
-                <img src="{{ $this->isUploaded ? $this->image->temporaryUrl() : url('storage/' . $this->image) }}"
-                    class="mt-2" width="250" height="300">
-            </label>
+@if ($currentRouteName == 'homepage.edit')
+    @if ($this->hero_img)
+        <div class="my-4">
+            <div class="mb-2">
+                <label class="block">
+                    <x-form-label label="Uploaded Image Preview" />
+                    <img src="{{ $this->isUploaded ? $this->hero_img->temporaryUrl() : url('storage/' . $this->hero_img) }}"
+                        class="mt-2" width="250" height="300">
+                </label>
+            </div>
         </div>
-    </div>
+    @endif
+@else
+    @if ($this->image)
+        <div class="my-4">
+            <div class="mb-2">
+                <label class="block">
+                    <x-form-label label="Uploaded Image Preview" />
+                    <img src="{{ $this->isUploaded ? $this->image->temporaryUrl() : url('storage/' . $this->image) }}"
+                        class="mt-2" width="250" height="300">
+                </label>
+            </div>
+        </div>
+    @endif
 @endif
+
 <div class="my-4">
     <div class="mb-2">
         <label class="block">

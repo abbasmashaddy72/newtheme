@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreBlogRequest;
 use App\Http\Requests\UpdateBlogRequest;
 use App\Models\Blog;
+use Illuminate\Support\Facades\Route;
 
 class BlogController extends Controller
 {
     public function __construct()
     {
         view()->share('title', 'Blog');
+        view()->share('currentRouteName', Route::currentRouteName());
     }
 
     /**

@@ -134,6 +134,7 @@
 
                 <!-- Social links -->
                 <ul class="flex mb-4 md:order-2 md:ml-4 md:mb-0">
+                    {{-- Twitter --}}
                     <li>
                         <a class="flex items-center justify-center text-white transition duration-150 ease-in-out bg-teal-500 rounded-full dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600"
                             href="#0" aria-label="Twitter">
@@ -143,15 +144,7 @@
                             </svg>
                         </a>
                     </li>
-                    <li class="ml-4">
-                        <a class="flex items-center justify-center text-white transition duration-150 ease-in-out bg-teal-500 rounded-full dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600"
-                            href="#0" aria-label="Github">
-                            <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16 8.2c-4.4 0-8 3.6-8 8 0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4V22c-2.2.5-2.7-1-2.7-1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.3 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.1-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8.6-.2 1.3-.3 2-.3s1.4.1 2 .3c1.5-1 2.2-.8 2.2-.8.4 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.1 0 3.1-1.9 3.7-3.7 3.9.3.4.6.9.6 1.6v2.2c0 .2.1.5.6.4 3.2-1.1 5.5-4.1 5.5-7.6-.1-4.4-3.7-8-8.1-8z" />
-                            </svg>
-                        </a>
-                    </li>
+                    {{-- FaceBook --}}
                     <li class="ml-4">
                         <a class="flex items-center justify-center text-white transition duration-150 ease-in-out bg-teal-500 rounded-full dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600"
                             href="#0" aria-label="Facebook">
@@ -161,6 +154,7 @@
                             </svg>
                         </a>
                     </li>
+                    {{-- Instagram --}}
                     <li class="ml-4">
                         <a class="flex items-center justify-center text-white transition duration-150 ease-in-out bg-teal-500 rounded-full dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600"
                             href="#0" aria-label="Instagram">
@@ -173,6 +167,7 @@
                             </svg>
                         </a>
                     </li>
+                    {{-- LinkIdInn --}}
                     <li class="ml-4">
                         <a class="flex items-center justify-center text-white transition duration-150 ease-in-out bg-teal-500 rounded-full dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600"
                             href="#0" aria-label="Linkedin">
@@ -187,13 +182,14 @@
                 <!-- Middle links -->
                 <div class="mb-2 text-sm text-gray-700 md:order-1 md:mb-0">
                     <a class="text-gray-600 transition duration-150 ease-in-out dark:text-gray-400 hover:underline"
-                        href="#0">Terms</a> · <a
+                        href="{{ route('terms') }}">Terms</a> · <a
                         class="text-gray-600 transition duration-150 ease-in-out dark:text-gray-400 hover:underline"
-                        href="#0">Privacy Policy</a>
+                        href="{{ route('privacy') }}">Privacy Policy</a>
                 </div>
 
                 <!-- Copyrights note -->
-                <div class="mr-4 text-sm text-gray-600 dark:text-gray-400">&copy; 2020 Appy. All rights reserved.</div>
+                <div class="mr-4 text-sm text-gray-600 dark:text-gray-400">&copy; {{ date('Y') }} UMDAA. All rights
+                    reserved.</div>
 
             </div>
 

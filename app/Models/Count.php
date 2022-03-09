@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Count extends Model
 {
     use HasFactory;
+
+    public $fillable = [
+        'count',
+        'title'
+    ];
 }

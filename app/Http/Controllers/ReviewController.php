@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Review;
+use Illuminate\Support\Facades\Route;
 
 class ReviewController extends Controller
 {
     public function __construct()
     {
         view()->share('title', 'Review');
+        view()->share('currentRouteName', Route::currentRouteName());
     }
 
     /**

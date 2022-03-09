@@ -38,10 +38,9 @@
                             {{ $about }}</p>
                         <div class="flex flex-col justify-center max-w-sm mx-auto mt-8 sm:flex-row sm:max-w-md md:mx-0"
                             data-aos="fade-down" data-aos-delay="300">
-                            <a class="text-white bg-teal-500 btn hover:bg-teal-400 shrink-0" href="#0">Book
-                                Appointment</a>
+                            <a class="text-white bg-teal-500 btn hover:bg-teal-400 shrink-0"
+                                href="{{ $action_button_link }}">{{ $action_button_text }}</a>
                         </div>
-                        </form>
                         <ul class="max-w-sm mx-auto mt-8 -mb-2 text-gray-600 sm:max-w-md md:max-w-none dark:text-gray-400"
                             data-aos="fade-down" data-aos-delay="450">
                             <div class="mb-2 text-xl font-bold font-red-hat-display">Why Doctor {{ $name }}?</div>
@@ -87,7 +86,7 @@
                                 height="624" style="max-width: 84.33%;" alt="Features illustration" /> --}}
                             <!-- iPhone mockup -->
                             <img class="relative h-auto max-w-full mx-auto pointer-events-none rounded-xl md:mr-0 md:max-w-none"
-                                src="{{ asset('images/' . $hero_img . '') }}" width="344" height="674"
+                                src="{{ asset('storage/' . $hero_img) }}" width="344" height="674"
                                 alt="{{ $name }}" aria-hidden="true" />
                             <!-- Play button -->
                             <a class="absolute transition duration-150 ease-in-out cursor-pointer hover:opacity-75"

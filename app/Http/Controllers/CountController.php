@@ -15,7 +15,7 @@ class CountController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.pages.count_add_edit');
     }
 
     /**

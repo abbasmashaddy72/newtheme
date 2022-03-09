@@ -42,7 +42,9 @@ class Edit extends Component
     {
         $this->validateOnly($propertyName);
 
-        $this->isUploaded = true;
+        if (gettype($this->image) != 'string') {
+            $this->isUploaded = true;
+        }
     }
 
     public function submit()

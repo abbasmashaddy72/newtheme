@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreServiceRequest;
 use App\Http\Requests\UpdateServiceRequest;
 use App\Models\Service;
+use Illuminate\Support\Facades\Route;
 
 class ServiceController extends Controller
 {
     public function __construct()
     {
         view()->share('title', 'Service');
+        view()->share('currentRouteName', Route::currentRouteName());
     }
 
     /**

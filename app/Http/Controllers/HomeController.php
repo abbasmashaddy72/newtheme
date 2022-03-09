@@ -20,6 +20,8 @@ class HomeController extends Controller
         $name = Helper::get_static_option('name');
         $department = Helper::get_static_option('department');
         $about = Helper::get_static_option('about');
+        $action_button_text = Helper::get_static_option('action_button_text');
+        $action_button_link = Helper::get_static_option('action_button_link');
         $why_points = explode(';', Helper::get_static_option('why_points'));
         $hero_img = Helper::get_static_option('hero_img');
         $hero_video = Helper::get_static_option('hero_video');
@@ -31,6 +33,8 @@ class HomeController extends Controller
             'name',
             'department',
             'about',
+            'action_button_text',
+            'action_button_link',
             'why_points',
             'hero_img',
             'hero_video',
@@ -69,5 +73,17 @@ class HomeController extends Controller
         $data = Service::findOrFail($id);
 
         return view('frontend.single-service', compact('data'));
+    }
+
+    public function terms()
+    {
+        $data = Helper::get_static_option('terms_description');
+        return view('frontend.terms', compact('data'));
+    }
+
+    public function privacy()
+    {
+        $data = Helper::get_static_option('privacy_description');
+        return view('frontend.privacy', compact('data'));
     }
 }
