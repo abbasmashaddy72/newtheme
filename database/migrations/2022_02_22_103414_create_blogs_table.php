@@ -21,6 +21,7 @@ return new class extends Migration
             $table->text('tags')->nullable();
             $table->text('excerpt')->nullable();
             $table->longText('description');
+            $table->bigInteger('clicks')->default(0);
             $table->timestamps();
         });
     }

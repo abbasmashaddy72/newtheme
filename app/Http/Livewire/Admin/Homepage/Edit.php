@@ -12,6 +12,7 @@ class Edit extends Component
 {
     use WithFileUploads;
 
+    public $logo;
     public $name;
     public $department;
     public $about;
@@ -35,6 +36,7 @@ class Edit extends Component
 
     public function mount()
     {
+        $this->logo = Helper::get_static_option('logo');
         $this->name = Helper::get_static_option('name');
         $this->department = Helper::get_static_option('department');
         $this->about = Helper::get_static_option('about');
@@ -53,6 +55,7 @@ class Edit extends Component
     }
 
     protected $rules = [
+        'logo' => '',
         'name' => '',
         'department' => '',
         'about' => '',

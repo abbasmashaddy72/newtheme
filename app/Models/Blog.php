@@ -18,7 +18,8 @@ class Blog extends Model implements HasMedia
         'image',
         'tags',
         'excerpt',
-        'description'
+        'description',
+        'clicks'
     ];
 
     public function service()

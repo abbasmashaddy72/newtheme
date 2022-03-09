@@ -31,6 +31,7 @@ class BlogFactory extends Factory
             'tags' => null,
             'excerpt' => $this->faker->paragraph(rand(1, 2)),
             'description' => $description,
+            'clicks' => rand(0, 50)
         ];
     }
 }

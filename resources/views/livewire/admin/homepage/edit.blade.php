@@ -2,6 +2,8 @@
     <form wire:submit.prevent="submit">
         @csrf
         @wire('debounce.200ms')
+        <x-form-textarea name="logo" label="Logo (32x32 in SVG)" type="text" />
+
         <x-form-input name="name" label="Name" type="text" />
 
         <x-form-input name="department" label="Department" type="text" />

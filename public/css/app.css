@@ -502,34 +502,6 @@ select{
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.container{
-  width: 100%;
-}
-@media (min-width: 640px){
-  .container{
-    max-width: 640px;
-  }
-}
-@media (min-width: 768px){
-  .container{
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px){
-  .container{
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px){
-  .container{
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1536px){
-  .container{
-    max-width: 1536px;
-  }
-}
 /* Additional styles */
 .h1{
   font-size: 3.5rem;
@@ -10179,6 +10151,10 @@ readers do not read off random characters that represent icons */
   margin: 1rem;
 }
 
+.m-auto{
+  margin: auto;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -10209,16 +10185,28 @@ readers do not read off random characters that represent icons */
   margin-right: 0.25rem;
 }
 
-.mb-6{
-  margin-bottom: 1.5rem;
+.mb-4{
+  margin-bottom: 1rem;
 }
 
 .mb-2{
   margin-bottom: 0.5rem;
 }
 
+.mt-4{
+  margin-top: 1rem;
+}
+
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+
 .-mt-3{
   margin-top: -0.75rem;
+}
+
+.mt-1{
+  margin-top: 0.25rem;
 }
 
 .mt-2{
@@ -10227,14 +10215,6 @@ readers do not read off random characters that represent icons */
 
 .mt-3{
   margin-top: 0.75rem;
-}
-
-.mt-4{
-  margin-top: 1rem;
-}
-
-.mb-4{
-  margin-bottom: 1rem;
 }
 
 .mb-3{
@@ -10281,16 +10261,8 @@ readers do not read off random characters that represent icons */
   margin-top: 3rem;
 }
 
-.ml-3{
-  margin-left: 0.75rem;
-}
-
 .mb-5{
   margin-bottom: 1.25rem;
-}
-
-.mt-1{
-  margin-top: 0.25rem;
 }
 
 .-mr-16{
@@ -10327,6 +10299,10 @@ readers do not read off random characters that represent icons */
 
 .mr-5{
   margin-right: 1.25rem;
+}
+
+.ml-3{
+  margin-left: 0.75rem;
 }
 
 .ml-6{
@@ -10381,6 +10357,14 @@ readers do not read off random characters that represent icons */
   display: none;
 }
 
+.h-full{
+  height: 100%;
+}
+
+.h-0{
+  height: 0px;
+}
+
 .h-96{
   height: 24rem;
 }
@@ -10389,16 +10373,8 @@ readers do not read off random characters that represent icons */
   height: 0.125rem;
 }
 
-.h-0{
-  height: 0px;
-}
-
 .h-20{
   height: 5rem;
-}
-
-.h-full{
-  height: 100%;
 }
 
 .h-3\.5{
@@ -10491,6 +10467,12 @@ readers do not read off random characters that represent icons */
 
 .w-5{
   width: 1.25rem;
+}
+
+.max-w-max{
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 
 .max-w-xs{
@@ -10603,16 +10585,16 @@ readers do not read off random characters that represent icons */
   justify-content: space-between;
 }
 
+.gap-12{
+  gap: 3rem;
+}
+
 .gap-4{
   gap: 1rem;
 }
 
 .gap-6{
   gap: 1.5rem;
-}
-
-.gap-12{
-  gap: 3rem;
 }
 
 .gap-8{
@@ -10915,6 +10897,10 @@ readers do not read off random characters that represent icons */
   padding-bottom: 1.5rem;
 }
 
+.pb-9\/16{
+  padding-bottom: 56.25%;
+}
+
 .pb-12{
   padding-bottom: 3rem;
 }
@@ -10929,10 +10915,6 @@ readers do not read off random characters that represent icons */
 
 .pt-6{
   padding-top: 1.5rem;
-}
-
-.pb-9\/16{
-  padding-bottom: 56.25%;
 }
 
 .pt-32{
@@ -10975,13 +10957,18 @@ readers do not read off random characters that represent icons */
   font-family: Inter, sans-serif;
 }
 
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.5;
 }
 
-.text-sm{
-  font-size: 0.875rem;
+.text-xs{
+  font-size: 0.75rem;
   line-height: 1.5;
 }
 
@@ -10993,11 +10980,6 @@ readers do not read off random characters that represent icons */
 .text-3xl{
   font-size: 2.63rem;
   line-height: 1.24;
-}
-
-.text-xs{
-  font-size: 0.75rem;
-  line-height: 1.5;
 }
 
 .font-medium{
@@ -11044,6 +11026,16 @@ readers do not read off random characters that represent icons */
   letter-spacing: 0.01em;
 }
 
+.text-gray-600{
+  --tw-text-opacity: 1;
+  color: rgb(82 82 90 / var(--tw-text-opacity));
+}
+
+.text-gray-500{
+  --tw-text-opacity: 1;
+  color: rgb(110 110 118 / var(--tw-text-opacity));
+}
+
 .text-gray-100{
   --tw-text-opacity: 1;
   color: rgb(244 244 245 / var(--tw-text-opacity));
@@ -11054,9 +11046,9 @@ readers do not read off random characters that represent icons */
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-gray-600{
+.text-red-500{
   --tw-text-opacity: 1;
-  color: rgb(82 82 90 / var(--tw-text-opacity));
+  color: rgb(192 50 33 / var(--tw-text-opacity));
 }
 
 .text-gray-400{
@@ -11084,19 +11076,9 @@ readers do not read off random characters that represent icons */
   color: rgb(237 100 166 / var(--tw-text-opacity));
 }
 
-.text-gray-500{
-  --tw-text-opacity: 1;
-  color: rgb(110 110 118 / var(--tw-text-opacity));
-}
-
 .text-gray-800{
   --tw-text-opacity: 1;
   color: rgb(46 46 51 / var(--tw-text-opacity));
-}
-
-.text-gray-300{
-  --tw-text-opacity: 1;
-  color: rgb(212 212 216 / var(--tw-text-opacity));
 }
 
 .text-gray-900{
@@ -11122,11 +11104,6 @@ readers do not read off random characters that represent icons */
 .text-yellow-500{
   --tw-text-opacity: 1;
   color: rgb(234 179 8 / var(--tw-text-opacity));
-}
-
-.text-red-500{
-  --tw-text-opacity: 1;
-  color: rgb(192 50 33 / var(--tw-text-opacity));
 }
 
 .antialiased{
@@ -12171,11 +12148,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   color: rgb(58 186 180 / var(--tw-text-opacity));
 }
 
-.hover\:text-gray-100:hover{
-  --tw-text-opacity: 1;
-  color: rgb(244 244 245 / var(--tw-text-opacity));
-}
-
 .hover\:text-gray-900:hover{
   --tw-text-opacity: 1;
   color: rgb(29 29 32 / var(--tw-text-opacity));
@@ -12477,14 +12449,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
     margin-left: 0px;
     margin-right: 0px;
   }
-  .md\:mt-16{
-    margin-top: 4rem;
-  }
   .md\:mb-0{
     margin-bottom: 0px;
   }
   .md\:mr-0{
     margin-right: 0px;
+  }
+  .md\:mt-16{
+    margin-top: 4rem;
   }
   .md\:mb-12{
     margin-bottom: 3rem;
