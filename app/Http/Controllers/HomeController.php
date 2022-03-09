@@ -75,9 +75,10 @@ class HomeController extends Controller
     public function singleBlog($id)
     {
         $data = Blog::findOrFail($id);
-        // Blog::findOrFail($id)->update('clicks', $data->clicks + 1);
+        Blog::where('id', $id)->increment('clicks');
+        $related_blogs = Blog::where('service_id', $data->service_id)->limit(2)->get();
 
-        return view('frontend.single-blog', compact('data'));
+        return view('frontend.single-blog', compact('data', 'related_blogs'));
     }
 
     public function services()

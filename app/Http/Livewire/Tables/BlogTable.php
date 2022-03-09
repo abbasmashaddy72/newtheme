@@ -34,6 +34,10 @@ class BlogTable extends LivewireDatatable
                 ->filterable()
                 ->label('Title'),
 
+            NumberColumn::name('clicks')
+                ->label('Views')
+                ->filterable(),
+
             Column::name('service.title')
                 ->searchable()
                 ->filterable()

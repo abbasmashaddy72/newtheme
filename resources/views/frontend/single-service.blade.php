@@ -7,8 +7,8 @@
 
         <!-- Background image -->
         <div class="box-content absolute inset-0 pt-16 h-128">
-            <img class="absolute inset-0 object-cover w-full h-full opacity-25" src="{{ $data->image }}" width="1440"
-                height="577" alt="{{ $data->title }}" />
+            <img class="absolute inset-0 object-cover w-full h-full opacity-25" src="{{ asset('storage/' . $data->image) }}"
+                width="1440" height="577" alt="{{ $data->title }}" />
             <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900" aria-hidden="true"></div>
         </div>
 
