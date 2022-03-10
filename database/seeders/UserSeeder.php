@@ -15,6 +15,6 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::factory()->count(rand(220, 350))->create();
+        User::factory()->count(1)->create();
     }
 }

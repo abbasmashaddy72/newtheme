@@ -184,7 +184,7 @@
                                 class="block overflow-hidden rounded-lg shadow-md c-card hover:shadow-xl dark:border-white dark:border-2">
                                 <div class="relative pb-48 overflow-hidden">
                                     <img class="absolute inset-0 object-cover w-full h-full"
-                                        src="{{ asset('images/' . $item->image . '') }}" alt="">
+                                        src="{{ asset('storage/' . $item->image . '') }}" alt="">
                                 </div>
                                 <div class="p-4">
                                     <span
