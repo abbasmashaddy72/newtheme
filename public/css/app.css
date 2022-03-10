@@ -10179,10 +10179,6 @@ readers do not read off random characters that represent icons */
   margin: 1rem;
 }
 
-.m-auto{
-  margin: auto;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -10429,6 +10425,10 @@ readers do not read off random characters that represent icons */
   height: 3rem;
 }
 
+.h-px{
+  height: 1px;
+}
+
 .h-8{
   height: 2rem;
 }
@@ -10443,10 +10443,6 @@ readers do not read off random characters that represent icons */
 
 .h-5{
   height: 1.25rem;
-}
-
-.h-px{
-  height: 1px;
 }
 
 .max-h-full{
@@ -10489,22 +10485,16 @@ readers do not read off random characters that represent icons */
   width: 1rem;
 }
 
+.w-5{
+  width: 1.25rem;
+}
+
 .w-8{
   width: 2rem;
 }
 
 .w-6{
   width: 1.5rem;
-}
-
-.w-5{
-  width: 1.25rem;
-}
-
-.max-w-max{
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
 }
 
 .max-w-xs{
@@ -10583,14 +10573,6 @@ readers do not read off random characters that represent icons */
 
 .cursor-default{
   cursor: default;
-}
-
-.list-inside{
-  list-style-position: inside;
-}
-
-.list-decimal{
-  list-style-type: decimal;
 }
 
 .grid-cols-2{
@@ -10697,12 +10679,12 @@ readers do not read off random characters that represent icons */
   border-width: 2px;
 }
 
-.border{
-  border-width: 1px;
-}
-
 .border-0{
   border-width: 0px;
+}
+
+.border{
+  border-width: 1px;
 }
 
 .border-t{
@@ -10711,10 +10693,6 @@ readers do not read off random characters that represent icons */
 
 .border-b{
   border-bottom-width: 1px;
-}
-
-.border-l-2{
-  border-left-width: 2px;
 }
 
 .border-gray-200{
@@ -10977,6 +10955,10 @@ readers do not read off random characters that represent icons */
   padding-bottom: 12rem;
 }
 
+.pt-px{
+  padding-top: 1px;
+}
+
 .pt-10{
   padding-top: 2.5rem;
 }
@@ -10987,14 +10969,6 @@ readers do not read off random characters that represent icons */
 
 .pr-4{
   padding-right: 1rem;
-}
-
-.pt-px{
-  padding-top: 1px;
-}
-
-.pl-4{
-  padding-left: 1rem;
 }
 
 .text-left{
@@ -11132,11 +11106,6 @@ readers do not read off random characters that represent icons */
   color: rgb(237 100 166 / var(--tw-text-opacity));
 }
 
-.text-gray-800{
-  --tw-text-opacity: 1;
-  color: rgb(46 46 51 / var(--tw-text-opacity));
-}
-
 .text-gray-900{
   --tw-text-opacity: 1;
   color: rgb(29 29 32 / var(--tw-text-opacity));
@@ -11160,11 +11129,6 @@ readers do not read off random characters that represent icons */
 .text-yellow-500{
   --tw-text-opacity: 1;
   color: rgb(234 179 8 / var(--tw-text-opacity));
-}
-
-.underline{
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
 }
 
 .antialiased{
@@ -12309,11 +12273,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.dark .dark\:border-gray-400{
-  --tw-border-opacity: 1;
-  border-color: rgb(162 162 168 / var(--tw-border-opacity));
-}
-
 .dark .dark\:bg-gray-700{
   --tw-bg-opacity: 1;
   background-color: rgb(63 63 69 / var(--tw-bg-opacity));
@@ -12516,9 +12475,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   .md\:col-span-10{
     grid-column: span 10 / span 10;
   }
-  .md\:float-left{
-    float: left;
-  }
   .md\:mx-0{
     margin-left: 0px;
     margin-right: 0px;
@@ -12537,9 +12493,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   }
   .md\:ml-4{
     margin-left: 1rem;
-  }
-  .md\:mr-8{
-    margin-right: 2rem;
   }
   .md\:block{
     display: block;
@@ -12567,9 +12520,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   }
   .md\:max-w-none{
     max-width: none;
-  }
-  .md\:max-w-sm{
-    max-width: 24rem;
   }
   .md\:grow{
     flex-grow: 1;
@@ -12605,14 +12555,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   .md\:py-16{
     padding-top: 4rem;
     padding-bottom: 4rem;
-  }
-  .md\:py-12{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-  .md\:px-12{
-    padding-left: 3rem;
-    padding-right: 3rem;
   }
   .md\:pb-20{
     padding-bottom: 5rem;
@@ -12668,9 +12610,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   }
   .lg\:ml-16{
     margin-left: 4rem;
-  }
-  .lg\:-ml-32{
-    margin-left: -8rem;
   }
   .lg\:flex{
     display: flex;

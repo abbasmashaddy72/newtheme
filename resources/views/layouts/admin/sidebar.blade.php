@@ -46,7 +46,7 @@
                 </i>
                 <x-slot name="nav_title">{{ __('Home Page') }}</x-slot>
             </x-nav-link>
-            <x-nav-link :href="route('count.add.edit')" :active="request()->routeIs('count.add.edit*')">
+            <x-nav-link :href="route('admin.about')" :active="request()->routeIs('admin.about*')">
                 <i class="icon">
                     <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path opacity="0.4"
@@ -57,7 +57,7 @@
                             fill="currentColor"></path>
                     </svg>
                 </i>
-                <x-slot name="nav_title">{{ __('History Counts') }}</x-slot>
+                <x-slot name="nav_title">{{ __('About') }}</x-slot>
             </x-nav-link>
             <x-nav-link :href="route('service.index')" :active="request()->routeIs('service*')">
                 <i class="icon">

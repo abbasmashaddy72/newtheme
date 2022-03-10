@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreCountRequest;
-use App\Http\Requests\UpdateCountRequest;
-use App\Models\Count;
+use App\Http\Requests\StoreAchievementRequest;
+use App\Http\Requests\UpdateAchievementRequest;
+use App\Models\Achievement;
 
-class CountController extends Controller
+class AchievementController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class CountController extends Controller
      */
     public function index()
     {
-        return view('admin.pages.count_add_edit');
+        //
     }
 
     /**
@@ -31,10 +31,10 @@ class CountController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreCountRequest  $request
+     * @param  \App\Http\Requests\StoreAchievementRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCountRequest $request)
+    public function store(StoreAchievementRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class CountController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Count  $count
+     * @param  \App\Models\Achievement  $achievement
      * @return \Illuminate\Http\Response
      */
-    public function show(Count $count)
+    public function show(Achievement $achievement)
     {
         //
     }
@@ -53,10 +53,10 @@ class CountController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Count  $count
+     * @param  \App\Models\Achievement  $achievement
      * @return \Illuminate\Http\Response
      */
-    public function edit(Count $count)
+    public function edit(Achievement $achievement)
     {
         //
     }
@@ -64,11 +64,11 @@ class CountController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateCountRequest  $request
-     * @param  \App\Models\Count  $count
+     * @param  \App\Http\Requests\UpdateAchievementRequest  $request
+     * @param  \App\Models\Achievement  $achievement
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateCountRequest $request, Count $count)
+    public function update(UpdateAchievementRequest $request, Achievement $achievement)
     {
         //
     }
@@ -76,10 +76,10 @@ class CountController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Count  $count
+     * @param  \App\Models\Achievement  $achievement
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Count $count)
+    public function destroy(Achievement $achievement)
     {
         //
     }

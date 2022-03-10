@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Livewire\Admin\Homepage;
+namespace App\Http\Livewire\Admin;
 
 use App\Models\Count;
 use Livewire\Component;
 
-class AddEditCount extends Component
+class AboutCount extends Component
 {
     public $data, $count, $title;
     public $updateMode = false;
@@ -26,9 +26,9 @@ class AddEditCount extends Component
 
     public function render()
     {
-        $this->data = Count::where('for', 'homePage')->get();
+        $this->data = Count::where('for', 'aboutPage')->get();
 
-        return view('livewire.admin.homepage.add-edit-count');
+        return view('livewire.admin.about-count');
     }
 
     private function resetInputFields()
@@ -55,7 +55,7 @@ class AddEditCount extends Component
         );
 
         foreach ($this->count as $key => $value) {
-            Count::create(['count' => $this->count[$key], 'title' => $this->title[$key], 'for' => 'homePage']);
+            Count::create(['count' => $this->count[$key], 'title' => $this->title[$key], 'for' => 'aboutPage']);
         }
 
         $this->inputs = [];

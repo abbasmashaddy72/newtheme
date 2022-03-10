@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('counts', function (Blueprint $table) {
+        Schema::create('achievements', function (Blueprint $table) {
             $table->id();
-            $table->text('title');
-            $table->string('for');
-            $table->text('count');
+            $table->bigInteger('year');
+            $table->string('title');
+            $table->string('excerpt');
+            $table->string('link');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('counts');
+        Schema::dropIfExists('achievements');
     }
 };

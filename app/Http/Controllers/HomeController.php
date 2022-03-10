@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Achievement;
 use App\Models\Blog;
 use App\Models\Count;
 use App\Models\Review;
 use App\Models\Service;
 use App\Services\Helper;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -39,7 +38,7 @@ class HomeController extends Controller
         $hero_video = Helper::get_static_option('hero_video');
         $testimonials_excerpt = Helper::get_static_option('testimonials_excerpt');
         $testimonials = Review::with('service')->get()->take(5);
-        $counts = Count::get();
+        $counts = Count::where('for', 'homePage')->get();
 
         return view('frontend.main', compact(
             'department',
@@ -57,7 +56,25 @@ class HomeController extends Controller
 
     public function about()
     {
-        return view('frontend.about');
+        $brief_heading = Helper::get_static_option('brief_heading');
+        $brief_excerpt = Helper::get_static_option('brief_excerpt');
+        $achievement_heading = Helper::get_static_option('achievement_heading');
+        $achievement_excerpt = Helper::get_static_option('achievement_excerpt');
+        $work_location_heading = Helper::get_static_option('work_location_heading');
+        $work_location_excerpt = Helper::get_static_option('work_location_excerpt');
+        $counts = Count::where('for', 'aboutPage')->get();
+        $achievements = Achievement::orderBy('year', 'DESC')->get()->groupBy('year');
+
+        return view('frontend.about', compact(
+            'brief_heading',
+            'brief_excerpt',
+            'achievement_heading',
+            'achievement_excerpt',
+            'work_location_heading',
+            'work_location_excerpt',
+            'counts',
+            'achievements'
+        ));
     }
 
     public function blogs()
@@ -69,7 +86,11 @@ class HomeController extends Controller
 
         $distinct_top_five = Blog::orderBy('clicks', 'DESC')->distinct('service_id')->limit(5)->get();
 
-        return view('frontend.blogs', compact('top_one', 'next_top_four', 'distinct_top_five'));
+        return view('frontend.blogs', compact(
+            'top_one',
+            'next_top_four',
+            'distinct_top_five'
+        ));
     }
 
     public function singleBlog($id)
@@ -78,7 +99,10 @@ class HomeController extends Controller
         Blog::where('id', $id)->increment('clicks');
         $related_blogs = Blog::where('service_id', $data->service_id)->limit(2)->get();
 
-        return view('frontend.single-blog', compact('data', 'related_blogs'));
+        return view('frontend.single-blog', compact(
+            'data',
+            'related_blogs'
+        ));
     }
 
     public function services()
@@ -98,12 +122,14 @@ class HomeController extends Controller
     public function terms()
     {
         $data = Helper::get_static_option('terms_description');
+
         return view('frontend.terms', compact('data'));
     }
 
     public function privacy()
     {
         $data = Helper::get_static_option('privacy_description');
+
         return view('frontend.privacy', compact('data'));
     }
 }

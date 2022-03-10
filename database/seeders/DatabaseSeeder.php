@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(ServiceSeeder::class); //Factory
         $this->call(BlogSeeder::class); //Factory
+        $this->call(AchievementSeeder::class); //Factory
         $this->call(ReviewSeeder::class); //Factory
         $this->call(CountSeeder::class); //Factory
         $this->call(StaticOptionSeeder::class); //Seeder

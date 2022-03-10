@@ -1848,6 +1848,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(58 87 232 / var(--tw-border-opacity));
 }
+.border-red-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(192 50 33 / var(--tw-border-opacity));
+}
 .border-gray-500{
   --tw-border-opacity: 1;
   border-color: rgb(173 181 189 / var(--tw-border-opacity));
@@ -1879,10 +1883,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(52 58 64 / var(--tw-border-opacity));
 }
-.border-red-500{
-  --tw-border-opacity: 1;
-  border-color: rgb(192 50 33 / var(--tw-border-opacity));
-}
 .bg-body{
   --tw-bg-opacity: 1;
   background-color: rgb(245 247 254 / var(--tw-bg-opacity));
@@ -1906,6 +1906,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-gray-100{
   --tw-bg-opacity: 1;
   background-color: rgb(248 249 250 / var(--tw-bg-opacity));
+}
+.bg-red-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(192 50 33 / var(--tw-bg-opacity));
 }
 .bg-red-600{
   --tw-bg-opacity: 1;
@@ -1942,10 +1946,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-gray-700{
   --tw-bg-opacity: 1;
   background-color: rgb(73 80 87 / var(--tw-bg-opacity));
-}
-.bg-red-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(192 50 33 / var(--tw-bg-opacity));
 }
 .bg-opacity-20{
   --tw-bg-opacity: 0.2;
@@ -2361,6 +2361,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(46 70 186 / var(--tw-bg-opacity));
 }
+.hover\:bg-red-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(154 40 26 / var(--tw-bg-opacity));
+}
 .hover\:bg-blue-200:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(176 188 246 / var(--tw-bg-opacity));
@@ -2384,10 +2388,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:bg-blue-800:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(23 35 93 / var(--tw-bg-opacity));
-}
-.hover\:bg-red-600:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(154 40 26 / var(--tw-bg-opacity));
 }
 .hover\:bg-gray-700:hover{
   --tw-bg-opacity: 1;

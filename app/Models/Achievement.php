@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Count extends Model
+class Achievement extends Model
 {
     use HasFactory;
 
-    public $fillable = [
-        'count',
+    protected $fillable = [
+        'year',
         'title',
-        'for'
+        'excerpt',
+        'link',
     ];
 }

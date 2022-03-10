@@ -18,6 +18,11 @@ class Miscellaneous extends Controller
         return view('admin.pages.homepage_edit');
     }
 
+    public function about()
+    {
+        return view('admin.pages.about');
+    }
+
     public function terms()
     {
         return view('admin.pages.terms');

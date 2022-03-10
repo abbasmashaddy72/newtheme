@@ -1,16 +1,16 @@
 <div>
-    <x-admin.basic-table title="Count's List" header="Id,Count,Title" :data='$data' />
+    <x-admin.basic-table title="Achievements Brief List" header="Id,SVG,Title" :data='$data' />
 
     <x-admin.form-custom title='Updated Data'>
         <form wire:submit.prevent="submit">
             @csrf
             @wire('debounce.200ms')
-            <x-form-input name="count.0" label="Count" type="number" />
+            <x-form-textarea name="count.0" label="SVG" type="text" />
 
             <x-form-input name="title.0" label="Title" type="text" />
 
             @foreach ($inputs as $key => $value)
-                <x-form-input name="count.{{ $value }}" label="Count" type="number" />
+                <x-form-textarea name="count.{{ $value }}" label="SVG" type="text" />
 
                 <x-form-input name="title.{{ $value }}" label="Title" type="text" />
                 <div class="col-md-2">

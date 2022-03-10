@@ -94,8 +94,8 @@ Route::get('/dashboard', [DashboardController::class, 'index'])
     ->name('dashboard');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'App\Http\Controllers'], function () {
-    Route::get('count_add_edit', 'CountController@index')->name('count.add.edit');
     Route::get('homepage', 'Miscellaneous@homepage')->name('homepage.edit');
+    Route::get('about', 'Miscellaneous@about')->name('admin.about');
     Route::get('terms', 'Miscellaneous@terms')->name('admin.terms');
     Route::get('privacy', 'Miscellaneous@privacy')->name('admin.privacy');
     Route::resource('blog', 'BlogController');
