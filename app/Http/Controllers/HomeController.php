@@ -132,4 +132,14 @@ class HomeController extends Controller
 
         return view('frontend.privacy', compact('data'));
     }
+
+    public function bookAppointment()
+    {
+        return view('frontend.book_appointment');
+    }
+
+    public function contactUs()
+    {
+        return view('frontend.contact_us');
+    }
 }

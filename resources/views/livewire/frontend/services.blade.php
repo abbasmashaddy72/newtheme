@@ -27,8 +27,10 @@
                             </div>
                         </div>
                     </div>
-                    <img src="{{ asset('storage/' . $item->image . '') }}" class="object-cover w-full rounded-lg h-96"
-                        alt="{{ $item->title }}" />
+                    <div class="hover:opacity-50">
+                        <img src="{{ asset('storage/' . $item->image . '') }}"
+                            class="object-cover w-full rounded-lg h-96" alt="{{ $item->title }}" />
+                    </div>
                 </a>
             </div>
         @endforeach

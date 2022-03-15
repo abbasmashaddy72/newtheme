@@ -115,157 +115,29 @@
                 </div>
 
                 <!-- Section content -->
-                <div class="lg:flex lg:items-start lg:justify-between">
-
-                    <!-- Job categories -->
-                    <div class="max-w-xs mx-auto grow sm:max-w-lg md:max-w-3xl lg:mx-0 lg:order-1">
-                        <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 sm:gap-6">
-                            <!-- 1st job item -->
-                            <a class="block group" href="#0">
-                                <div class="relative h-0 pb-9/16 sm:pb-1/1">
-                                    <img class="absolute inset-0 object-cover w-full h-full" src="../images/career-01.jpg"
-                                        width="240" height="240" alt="Career 01" />
-                                    <div class="absolute inset-0 opacity-75 bg-gradient-to-t from-gray-900"
-                                        aria-hidden="true"></div>
-                                    <div class="absolute bottom-0 left-0 right-0 m-4 text-center text-white">
-                                        <h4 class="text-lg font-bold tracking-tight break-words font-red-hat-display">
-                                            Development</h4>
-                                        <div class="text-sm italic opacity-70">4 Positions</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- 2nd job item -->
-                            <a class="block group" href="#0">
-                                <div class="relative h-0 pb-9/16 sm:pb-1/1">
-                                    <img class="absolute inset-0 object-cover w-full h-full" src="../images/career-02.jpg"
-                                        width="240" height="240" alt="Career 02" />
-                                    <div class="absolute inset-0 opacity-75 bg-gradient-to-t from-gray-900"
-                                        aria-hidden="true"></div>
-                                    <div class="absolute bottom-0 left-0 right-0 m-4 text-center text-white">
-                                        <h4 class="text-lg font-bold tracking-tight break-words font-red-hat-display">
-                                            Product & Design</h4>
-                                        <div class="text-sm italic opacity-70">10 Positions</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- 3rd job item -->
-                            <a class="block group" href="#0">
-                                <div class="relative h-0 pb-9/16 sm:pb-1/1">
-                                    <img class="absolute inset-0 object-cover w-full h-full" src="../images/career-03.jpg"
-                                        width="240" height="240" alt="Career 03" />
-                                    <div class="absolute inset-0 opacity-75 bg-gradient-to-t from-gray-900"
-                                        aria-hidden="true"></div>
-                                    <div class="absolute bottom-0 left-0 right-0 m-4 text-center text-white">
-                                        <h4 class="text-lg font-bold tracking-tight break-words font-red-hat-display">
-                                            Marketing</h4>
-                                        <div class="text-sm italic opacity-70">2 Positions</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- 4th job item -->
-                            <a class="block group" href="#0">
-                                <div class="relative h-0 pb-9/16 sm:pb-1/1">
-                                    <img class="absolute inset-0 object-cover w-full h-full" src="../images/career-04.jpg"
-                                        width="240" height="240" alt="Career 04" />
-                                    <div class="absolute inset-0 opacity-75 bg-gradient-to-t from-gray-900"
-                                        aria-hidden="true"></div>
-                                    <div class="absolute bottom-0 left-0 right-0 m-4 text-center text-white">
-                                        <h4 class="text-lg font-bold tracking-tight break-words font-red-hat-display">Data
-                                            Science</h4>
-                                        <div class="text-sm italic opacity-70">4 Positions</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- 5th job item -->
-                            <a class="block group" href="#0">
-                                <div class="relative h-0 pb-9/16 sm:pb-1/1">
-                                    <img class="absolute inset-0 object-cover w-full h-full" src="../images/career-05.jpg"
-                                        width="240" height="240" alt="Career 05" />
-                                    <div class="absolute inset-0 opacity-75 bg-gradient-to-t from-gray-900"
-                                        aria-hidden="true"></div>
-                                    <div class="absolute bottom-0 left-0 right-0 m-4 text-center text-white">
-                                        <h4 class="text-lg font-bold tracking-tight break-words font-red-hat-display">
-                                            Internal Systems</h4>
-                                        <div class="text-sm italic opacity-70">0 Positions</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- 6th job item -->
-                            <a class="block group" href="#0">
-                                <div class="relative h-0 pb-9/16 sm:pb-1/1">
-                                    <img class="absolute inset-0 object-cover w-full h-full" src="../images/career-06.jpg"
-                                        width="240" height="240" alt="Career 06" />
-                                    <div class="absolute inset-0 opacity-75 bg-gradient-to-t from-gray-900"
-                                        aria-hidden="true"></div>
-                                    <div class="absolute bottom-0 left-0 right-0 m-4 text-center text-white">
-                                        <h4 class="text-lg font-bold tracking-tight break-words font-red-hat-display">
-                                            Administrative</h4>
-                                        <div class="text-sm italic opacity-70">0 Positions</div>
-                                    </div>
-                                </div>
-                            </a>
+                <div class="container mx-auto">
+                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
+                        <div class="w-full rounded">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                                alt="image">
+                        </div>
+                        <div class="w-full rounded">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                                alt="image">
+                        </div>
+                        <div class="w-full rounded">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                                alt="image">
+                        </div>
+                        <div class="w-full rounded">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                                alt="image">
+                        </div>
+                        <div class="w-full rounded">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                                alt="image">
                         </div>
                     </div>
-
-                    <!-- Locations links -->
-                    <div class="max-w-lg mx-auto mt-8 lg:w-64 lg:mt-0 lg:ml-0 lg:mr-6">
-                        <h3 class="mb-4 text-lg font-bold tracking-tight text-center lg:text-left">Locations</h3>
-                        <ul
-                            class="flex flex-wrap justify-center -mx-3 -my-1 font-medium lg:flex-col lg:justify-start lg:mx-0">
-                            <li class="px-3 py-1 lg:px-0">
-                                <a class="flex items-center text-teal-500" href="#0">
-                                    <svg class="w-4 h-4 mr-3 text-gray-400 fill-current shrink-0 dark:text-gray-500"
-                                        viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7.3 8.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM7.3 14.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM.3 9.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0z" />
-                                    </svg>
-                                    <span>All locations (44)</span>
-                                </a>
-                            </li>
-                            <li class="px-3 py-1 lg:px-0">
-                                <a class="flex items-center text-gray-600 dark:text-gray-400 hover:text-teal-500" href="#0">
-                                    <svg class="w-4 h-4 mr-3 text-gray-400 fill-current shrink-0 dark:text-gray-500"
-                                        viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7.3 8.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM7.3 14.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM.3 9.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0z" />
-                                    </svg>
-                                    <span>London, UK (14)</span>
-                                </a>
-                            </li>
-                            <li class="px-3 py-1 lg:px-0">
-                                <a class="flex items-center text-gray-600 dark:text-gray-400 hover:text-teal-500" href="#0">
-                                    <svg class="w-4 h-4 mr-3 text-gray-400 fill-current shrink-0 dark:text-gray-500"
-                                        viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7.3 8.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM7.3 14.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM.3 9.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0z" />
-                                    </svg>
-                                    <span>Milan, Italy (22)</span>
-                                </a>
-                            </li>
-                            <li class="px-3 py-1 lg:px-0">
-                                <a class="flex items-center text-gray-600 dark:text-gray-400 hover:text-teal-500" href="#0">
-                                    <svg class="w-4 h-4 mr-3 text-gray-400 fill-current shrink-0 dark:text-gray-500"
-                                        viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7.3 8.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM7.3 14.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM.3 9.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0z" />
-                                    </svg>
-                                    <span>New York, NYC (4)</span>
-                                </a>
-                            </li>
-                            <li class="px-3 py-1 lg:px-0">
-                                <a class="flex items-center text-gray-600 dark:text-gray-400 hover:text-teal-500"
-                                    href="#0">
-                                    <svg class="w-4 h-4 mr-3 text-gray-400 fill-current shrink-0 dark:text-gray-500"
-                                        viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7.3 8.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM7.3 14.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0zM.3 9.7c-.4-.4-.4-1 0-1.4l7-7c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7 7c-.4.4-1 .4-1.4 0z" />
-                                    </svg>
-                                    <span>Berlin, DE (12)</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
                 </div>
 
             </div>

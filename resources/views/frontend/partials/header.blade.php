@@ -26,6 +26,10 @@
                             <a class="flex items-center px-5 py-2 text-gray-600 transition duration-150 ease-in-out hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                                 href="{{ route('about') }}">About</a>
                         </li>
+                        <li>
+                            <a class="flex items-center px-5 py-2 text-gray-600 transition duration-150 ease-in-out hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
+                                href="{{ route('contact.us') }}">Contact Us</a>
+                        </li>
                     </ul>
 
                     <!-- Desktop lights switch -->
@@ -54,7 +58,7 @@
                     <ul class="flex flex-wrap items-center justify-end">
                         <li>
                             <a class="ml-6 text-white bg-teal-500 btn-sm hover:bg-teal-400"
-                                href="{{ route('login') }}">Book Appointment</a>
+                                href="{{ route('book.appointment') }}">Book Appointment</a>
                         </li>
                     </ul>
 
@@ -110,22 +114,7 @@
                         x-transition:leave-end="opacity-0" x-cloak>
                         <div class="py-6 pl-20 pr-4">
                             <!-- Logo -->
-                            <svg class="w-8 h-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient x1="26%" y1="100%" x2="100%" y2="100%" id="menulogo_a">
-                                        <stop stop-color="#3ABAB4" offset="0%" />
-                                        <stop stop-color="#7F9CF5" offset="100%" />
-                                    </linearGradient>
-                                    <linearGradient x1="26%" y1="100%" x2="100%" y2="100%" id="menulogo_b">
-                                        <stop stop-color="#3ABAB4" offset="0%" />
-                                        <stop stop-color="#3ABAB4" stop-opacity="0" offset="100%" />
-                                    </linearGradient>
-                                </defs>
-                                <path d="M32 16h-8a8 8 0 10-16 0H0C0 7.163 7.163 0 16 0s16 7.163 16 16z"
-                                    fill="url(#menulogo_a)" />
-                                <path d="M32 16c0 8.837-7.163 16-16 16S0 24.837 0 16h8a8 8 0 1016 0h8z"
-                                    fill="url(#menulogo_b)" />
-                            </svg>
+                            @include('frontend.partials.logo')
                             <!-- Links -->
                             <ul>
                                 <li>
@@ -139,6 +128,14 @@
                                 <li>
                                     <a class="flex py-2 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                                         href="{{ route('about') }}">About</a>
+                                </li>
+                                <li>
+                                    <a class="flex py-2 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
+                                        href="{{ route('contact.us') }}">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a class="ml-6 text-white bg-teal-500 btn-sm hover:bg-teal-400"
+                                        href="{{ route('book.appointment') }}">Book Appointment</a>
                                 </li>
                             </ul>
                         </div>

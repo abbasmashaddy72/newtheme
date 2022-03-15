@@ -18,6 +18,12 @@ Route::get('/', [HomeController::class, 'index'])
 Route::get('/terms', [HomeController::class, 'terms'])
     ->name('terms');
 
+Route::get('/book_appointment', [HomeController::class, 'bookAppointment'])
+    ->name('book.appointment');
+
+Route::get('/contact_us', [HomeController::class, 'contactUs'])
+    ->name('contact.us');
+
 Route::get('/privacy', [HomeController::class, 'privacy'])
     ->name('privacy');
 
