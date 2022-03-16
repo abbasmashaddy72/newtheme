@@ -10,9 +10,7 @@
                     <p class="text-xl text-gray-600 dark:text-gray-400">Please Fill All the Fields</p>
                 </div>
 
-                <div class="text-lg text-gray-600 dark:text-gray-400" data-aos="fade-up" data-aos-delay="450">
-                    {{-- {!! $data !!} --}}
-                </div>
+                @livewire('frontend.book-appointment-form')
 
             </div>
         </div>

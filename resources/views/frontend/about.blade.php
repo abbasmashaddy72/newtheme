@@ -117,26 +117,25 @@
                 <!-- Section content -->
                 <div class="container mx-auto">
                     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
-                        <div class="w-full rounded">
-                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                                alt="image">
-                        </div>
-                        <div class="w-full rounded">
-                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                                alt="image">
-                        </div>
-                        <div class="w-full rounded">
-                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                                alt="image">
-                        </div>
-                        <div class="w-full rounded">
-                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                                alt="image">
-                        </div>
-                        <div class="w-full rounded">
-                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                                alt="image">
-                        </div>
+                        @foreach ($works as $item)
+                            <div class="relative h-0 pb-9/16 sm:pb-1/1">
+                                <img class="absolute inset-0 object-cover w-full h-full" src="{{ $item->image }}"
+                                    width="240" height="240" alt="Career 03" />
+                                <div class="absolute inset-0 opacity-75 bg-gradient-to-t from-gray-900 via-gray-700"
+                                    aria-hidden="true">
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 m-4 text-center text-white">
+                                    <h4 class="text-2xl font-bold tracking-tight break-words font-red-hat-display">
+                                        {{ $item->name }}</h4>
+                                    <h4 class="text-xl font-bold tracking-tight break-words font-red-hat-display">
+                                        {{ $item->location }}</h4>
+                                    <div class="text-xl italic opacity-70">{{ $item->timing }}</div>
+                                    <div class="text-xl italic opacity-70">{{ $item->days }}</div>
+                                    <a class="text-xl italic opacity-70"
+                                        href="tel:{{ $item->contact_number }}">{{ $item->contact_number }}</a>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
 

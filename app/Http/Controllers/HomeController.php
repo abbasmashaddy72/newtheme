@@ -7,6 +7,7 @@ use App\Models\Blog;
 use App\Models\Count;
 use App\Models\Review;
 use App\Models\Service;
+use App\Models\Work;
 use App\Services\Helper;
 
 class HomeController extends Controller
@@ -64,6 +65,7 @@ class HomeController extends Controller
         $work_location_excerpt = Helper::get_static_option('work_location_excerpt');
         $counts = Count::where('for', 'aboutPage')->get();
         $achievements = Achievement::orderBy('year', 'DESC')->get()->groupBy('year');
+        $works = Work::get();
 
         return view('frontend.about', compact(
             'brief_heading',
@@ -73,7 +75,8 @@ class HomeController extends Controller
             'work_location_heading',
             'work_location_excerpt',
             'counts',
-            'achievements'
+            'achievements',
+            'works'
         ));
     }
 

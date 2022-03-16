@@ -12,9 +12,8 @@
                         correctly typed your email address or our reply will not find its way back to you!</p>
                 </div>
 
-                <div class="text-lg text-gray-600 dark:text-gray-400" data-aos="fade-up" data-aos-delay="450">
-                    {{-- {!! $data !!} --}}
-                </div>
+                <!-- Contact form -->
+                @livewire('frontend.contact-us-form')
 
             </div>
         </div>

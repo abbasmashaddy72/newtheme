@@ -16,8 +16,13 @@ class WorkFactory extends Factory
      */
     public function definition()
     {
+        $days = ["Mon", "Teu", "Wed", "Thur", "Fri", "Sat", "Sun"];
         return [
-            //
+            'name' => $this->faker->name(),
+            'location' => $this->faker->state(),
+            'timing' => rand(1, 12) . "AM : " . rand(1, 12) . "PM",
+            'days' => $days[array_rand($days)],
+            'contact_number' => rand(7000000000, 9000000000),
         ];
     }
 }

@@ -10135,16 +10135,16 @@ readers do not read off random characters that represent icons */
   left: 0px;
 }
 
+.right-0{
+  right: 0px;
+}
+
 .left-auto{
   left: auto;
 }
 
 .top-0{
   top: 0px;
-}
-
-.right-0{
-  right: 0px;
 }
 
 .-z-1{
@@ -10175,9 +10175,18 @@ readers do not read off random characters that represent icons */
   z-index: 0;
 }
 
+.m-4{
+  margin: 1rem;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+
+.-mx-3{
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
 }
 
 .my-6{
@@ -10207,6 +10216,38 @@ readers do not read off random characters that represent icons */
   margin-top: 1rem;
 }
 
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
+.mb-1{
+  margin-bottom: 0.25rem;
+}
+
+.mb-3{
+  margin-bottom: 0.75rem;
+}
+
+.ml-3{
+  margin-left: 0.75rem;
+}
+
+.mr-4{
+  margin-right: 1rem;
+}
+
+.mt-6{
+  margin-top: 1.5rem;
+}
+
+.mt-px{
+  margin-top: 1px;
+}
+
+.ml-2{
+  margin-left: 0.5rem;
+}
+
 .mb-6{
   margin-bottom: 1.5rem;
 }
@@ -10227,28 +10268,8 @@ readers do not read off random characters that represent icons */
   margin-top: 0.75rem;
 }
 
-.mb-3{
-  margin-bottom: 0.75rem;
-}
-
-.mr-4{
-  margin-right: 1rem;
-}
-
 .ml-16{
   margin-left: 4rem;
-}
-
-.mb-1{
-  margin-bottom: 0.25rem;
-}
-
-.mt-px{
-  margin-top: 1px;
-}
-
-.ml-2{
-  margin-left: 0.5rem;
 }
 
 .mt-5{
@@ -10261,10 +10282,6 @@ readers do not read off random characters that represent icons */
 
 .mt-12{
   margin-top: 3rem;
-}
-
-.mb-5{
-  margin-bottom: 1.25rem;
 }
 
 .-mr-16{
@@ -10305,10 +10322,6 @@ readers do not read off random characters that represent icons */
 
 .mr-5{
   margin-right: 1.25rem;
-}
-
-.ml-3{
-  margin-left: 0.75rem;
 }
 
 .ml-6{
@@ -10371,6 +10384,14 @@ readers do not read off random characters that represent icons */
   height: 0px;
 }
 
+.h-6{
+  height: 1.5rem;
+}
+
+.h-3{
+  height: 0.75rem;
+}
+
 .h-96{
   height: 24rem;
 }
@@ -10385,10 +10406,6 @@ readers do not read off random characters that represent icons */
 
 .h-3\.5{
   height: 0.875rem;
-}
-
-.h-3{
-  height: 0.75rem;
 }
 
 .h-128{
@@ -10415,10 +10432,6 @@ readers do not read off random characters that represent icons */
   height: 2rem;
 }
 
-.h-6{
-  height: 1.5rem;
-}
-
 .h-screen{
   height: 100vh;
 }
@@ -10437,6 +10450,14 @@ readers do not read off random characters that represent icons */
 
 .w-full{
   width: 100%;
+}
+
+.w-6{
+  width: 1.5rem;
+}
+
+.w-3{
+  width: 0.75rem;
 }
 
 .w-20{
@@ -10459,10 +10480,6 @@ readers do not read off random characters that represent icons */
   width: 0.875rem;
 }
 
-.w-3{
-  width: 0.75rem;
-}
-
 .w-4{
   width: 1rem;
 }
@@ -10475,8 +10492,8 @@ readers do not read off random characters that represent icons */
   width: 2rem;
 }
 
-.w-6{
-  width: 1.5rem;
+.max-w-xl{
+  max-width: 36rem;
 }
 
 .max-w-xs{
@@ -10623,6 +10640,10 @@ readers do not read off random characters that represent icons */
   white-space: nowrap;
 }
 
+.break-words{
+  overflow-wrap: break-word;
+}
+
 .rounded-lg{
   border-radius: 0.5rem;
 }
@@ -10631,16 +10652,17 @@ readers do not read off random characters that represent icons */
   border-radius: 9999px;
 }
 
-.rounded{
-  border-radius: 0.25rem;
-}
-
 .rounded-xl{
   border-radius: 0.75rem;
 }
 
 .rounded-md{
   border-radius: 0.375rem;
+}
+
+.rounded-b{
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
 }
 
 .rounded-l-md{
@@ -10665,12 +10687,21 @@ readers do not read off random characters that represent icons */
   border-width: 1px;
 }
 
+.border-t-4{
+  border-top-width: 4px;
+}
+
 .border-t{
   border-top-width: 1px;
 }
 
 .border-b{
   border-bottom-width: 1px;
+}
+
+.border-teal-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(58 186 180 / var(--tw-border-opacity));
 }
 
 .border-gray-200{
@@ -10687,24 +10718,24 @@ readers do not read off random characters that represent icons */
   border-color: transparent;
 }
 
-.border-teal-500{
-  --tw-border-opacity: 1;
-  border-color: rgb(58 186 180 / var(--tw-border-opacity));
-}
-
 .border-gray-300{
   --tw-border-opacity: 1;
   border-color: rgb(212 212 216 / var(--tw-border-opacity));
 }
 
-.bg-gray-800{
+.bg-teal-100{
   --tw-bg-opacity: 1;
-  background-color: rgb(46 46 51 / var(--tw-bg-opacity));
+  background-color: rgb(230 255 250 / var(--tw-bg-opacity));
 }
 
 .bg-teal-500{
   --tw-bg-opacity: 1;
   background-color: rgb(58 186 180 / var(--tw-bg-opacity));
+}
+
+.bg-gray-800{
+  --tw-bg-opacity: 1;
+  background-color: rgb(46 46 51 / var(--tw-bg-opacity));
 }
 
 .bg-gray-300{
@@ -10782,8 +10813,17 @@ readers do not read off random characters that represent icons */
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(244 244 245 / 0));
 }
 
+.from-gray-900{
+  --tw-gradient-from: #1D1D20;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(29 29 32 / 0));
+}
+
 .via-gray-300{
   --tw-gradient-stops: var(--tw-gradient-from), #D4D4D8, var(--tw-gradient-to, rgb(212 212 216 / 0));
+}
+
+.via-gray-700{
+  --tw-gradient-stops: var(--tw-gradient-from), #3F3F45, var(--tw-gradient-to, rgb(63 63 69 / 0));
 }
 
 .to-white{
@@ -10811,6 +10851,26 @@ readers do not read off random characters that represent icons */
   padding: 0.25rem;
 }
 
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .px-8{
   padding-left: 2rem;
   padding-right: 2rem;
@@ -10821,11 +10881,6 @@ readers do not read off random characters that represent icons */
   padding-bottom: 2rem;
 }
 
-.px-4{
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -10834,11 +10889,6 @@ readers do not read off random characters that represent icons */
 .py-12{
   padding-top: 3rem;
   padding-bottom: 3rem;
-}
-
-.py-3{
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
 }
 
 .px-6{
@@ -10859,11 +10909,6 @@ readers do not read off random characters that represent icons */
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-}
-
-.py-1{
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .px-5{
@@ -10945,6 +10990,11 @@ readers do not read off random characters that represent icons */
   line-height: 1.5;
 }
 
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.5;
@@ -10955,9 +11005,9 @@ readers do not read off random characters that represent icons */
   line-height: 1.5;
 }
 
-.text-lg{
-  font-size: 1.125rem;
-  line-height: 1.5;
+.text-2xl{
+  font-size: 1.63rem;
+  line-height: 1.35;
 }
 
 .text-3xl{
@@ -10969,12 +11019,12 @@ readers do not read off random characters that represent icons */
   font-weight: 500;
 }
 
-.font-semibold{
-  font-weight: 600;
-}
-
 .font-bold{
   font-weight: 700;
+}
+
+.font-semibold{
+  font-weight: 600;
 }
 
 .font-extrabold{
@@ -11019,14 +11069,34 @@ readers do not read off random characters that represent icons */
   color: rgb(110 110 118 / var(--tw-text-opacity));
 }
 
-.text-gray-100{
+.text-gray-800{
   --tw-text-opacity: 1;
-  color: rgb(244 244 245 / var(--tw-text-opacity));
+  color: rgb(46 46 51 / var(--tw-text-opacity));
+}
+
+.text-red-600{
+  --tw-text-opacity: 1;
+  color: rgb(154 40 26 / var(--tw-text-opacity));
+}
+
+.text-teal-900{
+  --tw-text-opacity: 1;
+  color: rgb(35 78 82 / var(--tw-text-opacity));
+}
+
+.text-teal-500{
+  --tw-text-opacity: 1;
+  color: rgb(58 186 180 / var(--tw-text-opacity));
 }
 
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-100{
+  --tw-text-opacity: 1;
+  color: rgb(244 244 245 / var(--tw-text-opacity));
 }
 
 .text-red-500{
@@ -11037,11 +11107,6 @@ readers do not read off random characters that represent icons */
 .text-gray-400{
   --tw-text-opacity: 1;
   color: rgb(162 162 168 / var(--tw-text-opacity));
-}
-
-.text-teal-500{
-  --tw-text-opacity: 1;
-  color: rgb(58 186 180 / var(--tw-text-opacity));
 }
 
 .text-gray-900{
@@ -11086,12 +11151,16 @@ readers do not read off random characters that represent icons */
   opacity: 0.25;
 }
 
-.opacity-50{
-  opacity: 0.5;
-}
-
 .opacity-75{
   opacity: 0.75;
+}
+
+.opacity-70{
+  opacity: 0.7;
+}
+
+.opacity-50{
+  opacity: 0.5;
 }
 
 .opacity-0{
@@ -11102,15 +11171,15 @@ readers do not read off random characters that represent icons */
   opacity: 1;
 }
 
-.shadow-2xl{
-  --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .shadow-md{
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-2xl{
+  --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -12376,6 +12445,9 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   .sm\:py-8{
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+  .sm\:pb-1\/1{
+    padding-bottom: 100%;
   }
   .sm\:text-lg{
     font-size: 1.125rem;
