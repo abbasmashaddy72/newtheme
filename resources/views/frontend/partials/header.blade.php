@@ -16,6 +16,10 @@
                     <ul class="flex flex-wrap items-center font-medium grow">
                         <li>
                             <a class="flex items-center px-5 py-2 text-gray-600 transition duration-150 ease-in-out hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
+                                href="{{ route('home') }}">Home</a>
+                        </li>
+                        <li>
+                            <a class="flex items-center px-5 py-2 text-gray-600 transition duration-150 ease-in-out hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                                 href="{{ route('services') }}">Services</a>
                         </li>
                         <li>
@@ -117,6 +121,10 @@
                             @include('frontend.partials.logo')
                             <!-- Links -->
                             <ul>
+                                <li>
+                                    <a class="flex py-2 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
+                                        href="{{ route('home') }}">Home</a>
+                                </li>
                                 <li>
                                     <a class="flex py-2 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                                         href="{{ route('services') }}">Services</a>

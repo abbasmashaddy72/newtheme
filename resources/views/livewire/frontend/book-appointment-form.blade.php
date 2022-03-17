@@ -80,11 +80,11 @@
                     attended our facility?<span class="text-red-600"> *</span>
                 </div>
                 <label class="flex items-center mb-2">
-                    <input type="radio" class="form-radio" name="yes" value="yes" wire:model='previous_record' />
+                    <input type="radio" class="form-radio" name="yes" value="1" wire:model='previous_record' />
                     <span class="ml-3 text-sm text-gray-600 dark:text-gray-400">Yes</span>
                 </label>
                 <label class="flex items-center mb-2">
-                    <input type="radio" class="form-radio" name="no" value="no" wire:model='previous_record' />
+                    <input type="radio" class="form-radio" name="no" value="0" wire:model='previous_record' />
                     <span class="ml-3 text-sm text-gray-600 dark:text-gray-400">No</span>
                 </label>
                 @error('previous_record')
@@ -92,7 +92,7 @@
                 @enderror
             </div>
         </div>
-        @if ($previous_record == 'yes')
+        @if ($previous_record == '1')
             <div class="flex flex-wrap mb-5 -mx-3">
                 <div class="w-full px-3">
                     <label class="block mb-1 text-sm font-medium text-gray-800 dark:text-gray-300">If Yes, state on
@@ -108,7 +108,7 @@
             </div>
         @endif
         <div class="flex flex-wrap mb-5 -mx-3">
-            <div class="w-full px-3">
+            <div class="w-full px-3 mb-4 md:w-1/2 md:mb-0">
                 <label class="block mb-1 text-sm font-medium text-gray-800 dark:text-gray-300">Appointment Date
                     <span class="text-red-600">*</span>
                     <input type="date" class="w-full form-input" placeholder="Enter your Age" required
@@ -118,9 +118,7 @@
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
-        </div>
-        <div class="flex flex-wrap mb-5 -mx-3">
-            <div class="w-full px-3">
+            <div class="w-full px-3 mb-4 md:w-1/2 md:mb-0">
                 <label class="block mb-1 text-sm font-medium text-gray-800 dark:text-gray-300">Appointment Time
                     <span class="text-red-600">*</span>
                     <input type="time" class="w-full form-input" placeholder="Enter your phone number" required

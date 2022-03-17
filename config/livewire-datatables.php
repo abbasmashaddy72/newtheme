@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'default_time_format' => 'H:i',
+    'default_time_format' => 'h:i A',
     'default_date_format' => 'd/m/Y',
 
     /*
@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'model_namespace' => 'App',
+    'model_namespace' => 'App\Models',
 
     /*
     |--------------------------------------------------------------------------

@@ -113,7 +113,8 @@
                                             class="w-12 mt-1 text-gray-400 h4 font-red-hat-display dark:text-gray-600 shrink-0">
                                             {{ '0' . $i++ }}</div>
                                         <article>
-                                            <a class="hover:underline" href="blog-post.html">
+                                            <a class="hover:underline"
+                                                href="{{ route('single-blog', ['id' => $item->id]) }}">
                                                 <h3 class="mb-1 font-bold tracking-tight font-red-hat-display">
                                                     {{ $item->title }}
                                                 </h3>

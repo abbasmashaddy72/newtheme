@@ -1,4 +1,4 @@
-<x-admin.form-custom title='Updated Data'>
+<x-admin.form-custom back='true' title='Updated Data'>
     <form wire:submit.prevent="submit">
         @csrf
         @wire('debounce.200ms')

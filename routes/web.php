@@ -104,6 +104,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'App\H
     Route::get('about', 'Miscellaneous@about')->name('admin.about');
     Route::get('terms', 'Miscellaneous@terms')->name('admin.terms');
     Route::get('privacy', 'Miscellaneous@privacy')->name('admin.privacy');
+    Route::get('contacted_us', 'Miscellaneous@contactedUs')->name('contacted.us');
+    Route::get('booked_appointment', 'Miscellaneous@bookedAppointment')->name('booked.appointment');
     Route::resource('blog', 'BlogController');
     Route::resource('review', 'ReviewController');
     Route::resource('service', 'ServiceController');

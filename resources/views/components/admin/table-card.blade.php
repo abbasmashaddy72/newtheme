@@ -4,9 +4,11 @@
             <div class="header-title">
                 <h4 class="mb-2 text-2xl font-medium card-title">{{ $title }}</h4>
             </div>
-            <div class="card-action">
-                {{ $addbutton }}
-            </div>
+            @if (!empty($addbutton))
+                <div class="card-action">
+                    {{ $addbutton }}
+                </div>
+            @endif
         </div>
         <div class="flex-auto p-6">
             {{ $slot }}

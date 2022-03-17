@@ -1,4 +1,4 @@
-<x-admin.form-custom>
+<x-admin.form-custom back='true'>
     <form wire:submit.prevent="submit">
         @csrf
         <x-admin.form.blog />

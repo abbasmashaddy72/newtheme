@@ -44,4 +44,14 @@ class Miscellaneous extends Controller
             'url' => $image->getUrl('thumb')
         ]);
     }
+
+    public function contactedUs()
+    {
+        return view('admin.pages.contacted_us');
+    }
+
+    public function bookedAppointment()
+    {
+        return view('admin.pages.booked_appointment');
+    }
 }

@@ -33,7 +33,7 @@
                                     <td class="px-6 py-4 whitespace-nowrap ">{{ $value->id }}</td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="flex items-center">
-                                            <h6 class="text-base font-medium">{!! $value->count !!}</h6>
+                                            <h6 class="text-base font-medium">{{ $value->year }}</h6>
                                         </div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
@@ -42,6 +42,9 @@
                                         </div>
                                     </td>
                                     <td class="px-4 py-2 border">
+                                        <button type="button" wire:click="edit({{ $value->id }})"
+                                            class="inline-block p-2 px-6 py-2 text-base font-normal text-center text-white transition-all duration-500 ease-in-out bg-blue-500 border border-blue-500 rounded shadow-md hover:shadow-md hover:bg-blue-600 hover:text-white">
+                                            Edit</button>
                                         <button type="button" wire:click="delete({{ $value->id }})"
                                             class="inline-block p-2 px-6 py-2 text-base font-normal text-center text-white transition-all duration-500 ease-in-out bg-red-500 border border-red-500 rounded shadow-md hover:shadow-xl hover:bg-red-600 hover:text-white">
                                             Delete</button>

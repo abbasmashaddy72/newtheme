@@ -12,9 +12,11 @@
                     @endif
                 </h4>
             </div>
-            <div class="card-action">
-                <x-admin.a-button href="{{ url()->previous() }}">Back</x-admin.a-button>
-            </div>
+            @if (!empty($back))
+                <div class="card-action">
+                    <x-admin.a-button href="{{ url()->previous() }}">Back</x-admin.a-button>
+                </div>
+            @endif
         </div>
         <div class="flex-auto p-6">
             {{ $slot }}
