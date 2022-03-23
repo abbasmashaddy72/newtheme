@@ -116,7 +116,7 @@ class HomeController extends Controller
 
     public function singleService($id)
     {
-        $data = Service::with('reviews')->findOrFail($id);
+        $data = Service::findOrFail($id);
 
         return view('frontend.single-service', compact('data'));
     }

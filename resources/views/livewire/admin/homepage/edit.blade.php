@@ -44,6 +44,10 @@
         <x-form-input name="google_business" label="Google Business" type="text" />
 
         <x-form-input name="embed_map_link" label="Embed Map Link" type="text" />
+
+        <x-form-input name="gr_api"
+            label="Google Review API(Follow the Instructions from https://googlereviews.cws.net & past the value of load_google_reviews from 2nd script)"
+            type="text" />
         @endwire
         <div class="mt-3">
             <x-admin.submit-button>

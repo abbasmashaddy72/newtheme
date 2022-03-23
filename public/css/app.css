@@ -10464,6 +10464,10 @@ readers do not read off random characters that represent icons */
   height: 8rem;
 }
 
+.h-2{
+  height: 0.5rem;
+}
+
 .max-h-full{
   max-height: 100%;
 }
@@ -11221,6 +11225,11 @@ readers do not read off random characters that represent icons */
 .text-teal-400{
   --tw-text-opacity: 1;
   color: rgb(79 209 197 / var(--tw-text-opacity));
+}
+
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .antialiased{
