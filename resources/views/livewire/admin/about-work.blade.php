@@ -1,6 +1,6 @@
 <div class="w-full pb-8">
     <div class="grid grid-flow-col gap-3">
-        <x-admin.works-table title="All Achievements List" header="Id,Name,Contact Number" :data='$data' />
+        <x-admin.works-table title="All Work List" header="Id,Name,Contact Number" :data='$data' />
         @if ($updateMode)
             <x-admin.form-custom title='Edit Data'>
                 <form wire:submit.prevent="update">

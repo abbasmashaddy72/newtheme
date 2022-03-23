@@ -14,8 +14,10 @@ class Show extends Component
     public $image;
     public $message;
     public $stars;
+    public $video_url;
 
     public $isUploaded = false;
+    public $hero_img = false;
 
     public function mount($review)
     {
@@ -25,6 +27,7 @@ class Show extends Component
         $this->image = $data->image;
         $this->message = $data->message;
         $this->stars = $data->stars;
+        $this->video_url = $data->video_url;
     }
 
     public function render()

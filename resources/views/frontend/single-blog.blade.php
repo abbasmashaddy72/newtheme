@@ -115,4 +115,17 @@
             });
         })
     </script>
+    <script>
+        window.addEventListener('load', function() {
+            document.querySelectorAll('p > a').forEach(element => {
+                // get just the code for this youtube video from the url
+                let href = element.attributes.href.value;
+                let text = element.innerHTML;
+                // paste some BS5 embed code in place of the Figure tag
+                element.parentElement.outerHTML =
+                    `
+                <p class="m-2 text-center"><a class="ml-6 text-white bg-teal-500 btn-sm hover:bg-teal-400" href="${href}">${text}</a></p>`;
+            });
+        })
+    </script>
 @endpush

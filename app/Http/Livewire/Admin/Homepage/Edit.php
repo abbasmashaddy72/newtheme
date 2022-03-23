@@ -30,6 +30,7 @@ class Edit extends Component
     public $instagram;
     public $linkedin;
     public $google_business;
+    public $embed_map_link;
 
     public $isUploaded = false;
     public $image = false;
@@ -52,6 +53,7 @@ class Edit extends Component
         $this->instagram = Helper::get_static_option('instagram');
         $this->linkedin = Helper::get_static_option('linkedin');
         $this->google_business = Helper::get_static_option('google_business');
+        $this->embed_map_link = Helper::get_static_option('embed_map_link');
     }
 
     protected $rules = [
@@ -71,6 +73,7 @@ class Edit extends Component
         'instagram' => '',
         'linkedin' => '',
         'google_business' => '',
+        'embed_map_link' => '',
     ];
 
     public function updated($propertyName)

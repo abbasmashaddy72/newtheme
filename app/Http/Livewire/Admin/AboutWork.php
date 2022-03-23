@@ -18,6 +18,7 @@ class AboutWork extends Component
 
     public $updateMode = false;
     public $isUploaded = false;
+    public $hero_img = false;
 
     public function render()
     {
@@ -47,7 +48,9 @@ class AboutWork extends Component
             'contact_number' => '',
         ]);
 
-        // $validatedData['image'] = $this->image->store('work_images');
+        if (gettype($this->image) != 'string') {
+            $validatedData['image'] = $this->image->store('work_images');
+        }
 
         Work::create([
             'name' => $this->name,
@@ -88,6 +91,10 @@ class AboutWork extends Component
         ]);
 
         $this->isUploaded = true;
+
+        if (gettype($this->image) != 'string') {
+            $validatedData['image'] = $this->image->store('work_images');
+        }
 
         if ($this->selected_id) {
             $record = Work::find($this->selected_id);

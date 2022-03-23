@@ -16,6 +16,7 @@ class Create extends Component
     public $description;
 
     public $isUploaded = false;
+    public $hero_img = false;
 
     protected $rules = [
         'title' => '',
@@ -36,7 +37,10 @@ class Create extends Component
     public function submit()
     {
         $validatedData = $this->validate();
-        $validatedData['image'] = $this->image->store('service_images');
+
+        if (gettype($this->image) != 'string') {
+            $validatedData['image'] = $this->image->store('service_images');
+        }
 
         Service::create($validatedData);
 

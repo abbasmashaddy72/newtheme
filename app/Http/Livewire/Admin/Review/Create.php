@@ -12,15 +12,18 @@ class Create extends Component
 
     public $service_id;
     public $name;
+    public $video_url;
     public $image;
     public $message;
     public $stars;
 
     public $isUploaded = false;
+    public $hero_img = false;
 
     protected $rules = [
         'service_id' => '',
         'name' => '',
+        'video_url' => '',
         'image' => '',
         'message' => '',
         'stars' => '',
@@ -38,7 +41,10 @@ class Create extends Component
     public function submit()
     {
         $validatedData = $this->validate();
-        $validatedData['image'] = $this->image->store('review_image');
+
+        if (gettype($this->image) != 'string') {
+            $validatedData['image'] = $this->image->store('review_image');
+        }
 
         Review::create($validatedData);
 

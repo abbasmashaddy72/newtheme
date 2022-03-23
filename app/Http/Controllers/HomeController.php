@@ -21,6 +21,7 @@ class HomeController extends Controller
         view()->share('instagram', Helper::get_static_option('instagram'));
         view()->share('linkedin', Helper::get_static_option('linkedin'));
         view()->share('google_business', Helper::get_static_option('google_business'));
+        view()->share('embed_map_link', Helper::get_static_option('embed_map_link'));
     }
 
     /**
@@ -38,7 +39,6 @@ class HomeController extends Controller
         $hero_img = Helper::get_static_option('hero_img');
         $hero_video = Helper::get_static_option('hero_video');
         $testimonials_excerpt = Helper::get_static_option('testimonials_excerpt');
-        $testimonials = Review::with('service')->get()->take(5);
         $counts = Count::where('for', 'homePage')->get();
 
         return view('frontend.main', compact(
@@ -50,7 +50,6 @@ class HomeController extends Controller
             'hero_img',
             'hero_video',
             'testimonials_excerpt',
-            'testimonials',
             'counts',
         ));
     }
@@ -117,7 +116,7 @@ class HomeController extends Controller
 
     public function singleService($id)
     {
-        $data = Service::findOrFail($id);
+        $data = Service::with('reviews')->findOrFail($id);
 
         return view('frontend.single-service', compact('data'));
     }

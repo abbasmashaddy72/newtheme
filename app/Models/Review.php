@@ -12,6 +12,7 @@ class Review extends Model
     public $fillable = [
         'service_id',
         'name',
+        'video_url',
         'message',
         'image',
         'stars'

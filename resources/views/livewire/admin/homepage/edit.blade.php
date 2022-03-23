@@ -42,6 +42,8 @@
         <x-form-input name="linkedin" label="Linkedin" type="text" />
 
         <x-form-input name="google_business" label="Google Business" type="text" />
+
+        <x-form-input name="embed_map_link" label="Embed Map Link" type="text" />
         @endwire
         <div class="mt-3">
             <x-admin.submit-button>

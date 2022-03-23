@@ -4,6 +4,8 @@
 
 <x-form-input name="name" label="Name" type="text" />
 
+<x-form-input name="video_url" label="Video URL" type="text" />
+
 <x-form-textarea name="message" label="message" required />
 
 <x-form-input name="stars" label="No. of Stars" type="number" />

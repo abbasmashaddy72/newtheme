@@ -16,6 +16,7 @@ class Show extends Component
     public $description;
 
     public $isUploaded = false;
+    public $hero_img = false;
 
     public function mount($service)
     {

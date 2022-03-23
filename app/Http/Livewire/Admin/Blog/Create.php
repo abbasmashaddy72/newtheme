@@ -18,6 +18,7 @@ class Create extends Component
     public $description;
 
     public $isUploaded = false;
+    public $hero_img = false;
 
     protected $rules = [
         'service_id' => '',
@@ -40,7 +41,10 @@ class Create extends Component
     public function submit()
     {
         $validatedData = $this->validate();
-        $validatedData['image'] = $this->image->store('blog_images');
+
+        if (gettype($this->image) != 'string') {
+            $validatedData['image'] = $this->image->store('blog_images');
+        }
 
         Blog::create($validatedData);
 

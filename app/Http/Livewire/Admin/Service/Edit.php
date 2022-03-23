@@ -18,6 +18,7 @@ class Edit extends Component
     public $description;
 
     public $isUploaded = false;
+    public $hero_img = false;
 
     public function mount($service)
     {
@@ -47,7 +48,10 @@ class Edit extends Component
     public function submit()
     {
         $validatedData = $this->validate();
-        $validatedData['image'] = $this->image->store('services_images');
+
+        if (gettype($this->image) != 'string') {
+            $validatedData['image'] = $this->image->store('services_images');
+        }
 
         Service::where('id', $this->service)->update($validatedData);
 

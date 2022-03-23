@@ -20,6 +20,7 @@ class Edit extends Component
     public $description;
 
     public $isUploaded = false;
+    public $hero_img = false;
 
     public function mount($blog)
     {
@@ -53,7 +54,10 @@ class Edit extends Component
     public function submit()
     {
         $validatedData = $this->validate();
-        $validatedData['image'] = $this->image->store('blog_images');
+
+        if (gettype($this->image) != 'string') {
+            $validatedData['image'] = $this->image->store('blog_images');
+        }
 
         Blog::where('id', $this->blog)->update($validatedData);
 

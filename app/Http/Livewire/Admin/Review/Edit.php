@@ -14,11 +14,13 @@ class Edit extends Component
 
     public $service_id;
     public $name;
+    public $video_url;
     public $image;
     public $message;
     public $stars;
 
     public $isUploaded = false;
+    public $hero_img = false;
 
     public function mount($review)
     {
@@ -28,11 +30,13 @@ class Edit extends Component
         $this->image = $data->image;
         $this->message = $data->message;
         $this->stars = $data->stars;
+        $this->video_url = $data->video_url;
     }
 
     protected $rules = [
         'service_id' => '',
         'name' => '',
+        'video_url' => '',
         'image' => '',
         'message' => '',
         'stars' => '',
@@ -50,7 +54,10 @@ class Edit extends Component
     public function submit()
     {
         $validatedData = $this->validate();
-        $validatedData['image'] = $this->image->store('review_image');
+
+        if (gettype($this->image) != 'string') {
+            $validatedData['image'] = $this->image->store('review_image');
+        }
 
         Review::where('id', $this->review)->update($validatedData);
 

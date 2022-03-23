@@ -12,6 +12,14 @@
         <div class="relative max-w-6xl px-4 mx-auto sm:px-6">
             <div class="pt-32 pb-12 md:pt-40 md:pb-16">
 
+                @if (Jenssegers\Agent\Facades\Agent::isMobile() || Jenssegers\Agent\Facades\Agent::isTablet())
+                    <div class="flex flex-wrap items-center justify-end mb-4">
+                        <a class="ml-6 text-right text-white bg-teal-500 btn-sm hover:bg-teal-400"
+                            href="{{ route('book.appointment') }}">Book
+                            Appointment</a>
+                    </div>
+                @endif
+
                 <!-- Featured article -->
                 <div class="max-w-3xl" data-aos="fade-down">
                     <article>
