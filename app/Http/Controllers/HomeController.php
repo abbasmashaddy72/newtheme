@@ -40,6 +40,8 @@ class HomeController extends Controller
         $hero_video = Helper::get_static_option('hero_video');
         $testimonials_excerpt = Helper::get_static_option('testimonials_excerpt');
         $counts = Count::where('for', 'homePage')->get();
+        $gr_api = Helper::get_static_option('gr_api');
+        $gr_count_api = Helper::get_static_option('gr_count_api');
 
         return view('frontend.main', compact(
             'department',
@@ -51,6 +53,8 @@ class HomeController extends Controller
             'hero_video',
             'testimonials_excerpt',
             'counts',
+            'gr_api',
+            'gr_count_api'
         ));
     }
 
@@ -117,8 +121,9 @@ class HomeController extends Controller
     public function singleService($id)
     {
         $data = Service::findOrFail($id);
+        $gr_api = Helper::get_static_option('gr_api');
 
-        return view('frontend.single-service', compact('data'));
+        return view('frontend.single-service', compact('data', 'gr_api'));
     }
 
     public function terms()

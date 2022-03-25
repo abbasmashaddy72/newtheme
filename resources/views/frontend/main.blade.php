@@ -176,6 +176,7 @@
             <!-- * Initialized in src/js/main.js -->
             <!-- * Custom styles in src/css/additional-styles/theme.scss -->
             @livewire('frontend.testimonials')
+            @include('frontend.partials.g-reviews')
 
         </div>
     </section>

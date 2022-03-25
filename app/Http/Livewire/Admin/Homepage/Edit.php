@@ -32,6 +32,7 @@ class Edit extends Component
     public $google_business;
     public $embed_map_link;
     public $gr_api;
+    public $gr_count_api;
 
     public $isUploaded = false;
     public $image = false;
@@ -56,6 +57,7 @@ class Edit extends Component
         $this->google_business = Helper::get_static_option('google_business');
         $this->embed_map_link = Helper::get_static_option('embed_map_link');
         $this->gr_api = Helper::get_static_option('gr_api');
+        $this->gr_count_api = Helper::get_static_option('gr_count_api');
     }
 
     protected $rules = [
@@ -77,6 +79,7 @@ class Edit extends Component
         'google_business' => '',
         'embed_map_link' => '',
         'gr_api' => '',
+        'gr_count_api' => '',
     ];
 
     public function updated($propertyName)

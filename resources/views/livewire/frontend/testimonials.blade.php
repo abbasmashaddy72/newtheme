@@ -1,4 +1,4 @@
-<div class="relative z-40 px-8 py-20 xl:px-20 2xl:mx-auto 2xl:container">
+<div class="relative z-40 px-8 py-10 xl:px-20 2xl:mx-auto 2xl:container">
 
     @foreach ($testimonials as $item)
         <div x-data="{ modalExpanded{{ str_replace(' ', '', $item->name) }}: false }">
@@ -8,15 +8,15 @@
                         <img src="{{ asset('storage/' . $item->image . '') }}" alt="image of profile"
                             class="flex-shrink-0 object-cover w-full h-full rounded shadow-lg object-fit" />
                         <div
-                            class="absolute top-0 right-0 items-center justify-center hidden w-32 h-32 -mr-16 bg-indigo-100 rounded-full md:flex -mt-14">
-                            <a class="absolute transition duration-150 ease-in-out cursor-pointer hover:opacity-75"
+                            class="absolute bottom-0 flex items-center justify-center w-32 h-32 -mr-16 bg-indigo-100 rounded-full md:top-0 md:right-0 -mt-14">
+                            <a class="transition duration-150 ease-in-out cursor-pointer hover:opacity-75"
                                 @click.prevent="modalExpanded{{ str_replace(' ', '', $item->name) }} = true"
                                 aria-controls="modal">
                                 <img src="{{ asset('svg/play-button.svg') }}" width="96" height="96" alt="Play" />
                             </a>
                         </div>
                     </div>
-                    <div class="flex flex-col justify-between mt-4 md:w-1/3 lg:w-1/3 xl:ml-32 md:ml-20 md:mt-0">
+                    <div class="flex flex-col justify-between m-4 md:w-1/3 lg:w-1/3 xl:ml-32 md:ml-20 md:mt-0">
                         <div>
                             <h1 class="text-2xl font-semibold text-gray-800 xl:leading-loose dark:text-white ">
                                 {{ $item->name }}</h1>
@@ -82,39 +82,4 @@
     <div class="mt-5">
         {{ $testimonials->links() }}
     </div>
-
-    <div id="cws_google_reviews" class="mt-8"></div>
 </div>
-@push('scripts')
-    <script>
-        function load_google_reviews(place) {
-
-            var xmlhttp = new XMLHttpRequest();
-
-            xmlhttp.onreadystatechange = function() {
-                if (xmlhttp.readyState == XMLHttpRequest.DONE) { // XMLHttpRequest.DONE == 4
-                    if (xmlhttp.status == 200) {
-                        document.getElementById("cws_google_reviews").innerHTML = xmlhttp.responseText;
-
-                        document.getElementById("powered_by_cws").style.cssText = "; display:block !important;";
-                    } else if (xmlhttp.status == 400) {
-                        document.getElementById("cws_google_reviews").innerHTML(
-                            '<p>There was an error processing your reviews.<br /><small>[code: 400]</small></p>');
-                    } else {
-                        document.getElementById("cws_google_reviews").innerHTML(
-                            '<p>Unknown error occured.<br /><small>[code: 600]</small></p>');
-                    }
-                }
-            };
-
-            xmlhttp.open("POST", "https://googlereviews.cws.net/display-reviews.php", true);
-            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xmlhttp.send("place=" + place);
-        }
-    </script>
-
-    <script>
-        var gr_api = "{{ $gr_api }}";
-        load_google_reviews(gr_api);
-    </script>
-@endpush

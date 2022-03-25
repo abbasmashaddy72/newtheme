@@ -22,8 +22,7 @@ class Testimonials extends Component
         } else {
             $testimonials = Review::with('service')->where('service_id', $this->service_id)->latest()->paginate(1);
         }
-        $gr_api = Helper::get_static_option('gr_api');
 
-        return view('livewire.frontend.testimonials', compact('testimonials', 'gr_api'));
+        return view('livewire.frontend.testimonials', compact('testimonials'));
     }
 }

@@ -44,6 +44,7 @@
 
     <div class="text-center text-black h2">Reviews</div>
     @livewire('frontend.testimonials', ['service_id' => $data->id])
+    @include('frontend.partials.g-reviews')
 @endpush
 @push('scripts')
     <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>

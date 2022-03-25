@@ -43,10 +43,15 @@
 
         <x-form-input name="google_business" label="Google Business" type="text" />
 
-        <x-form-input name="embed_map_link" label="Embed Map Link" type="text" />
+        <x-form-input name="embed_map_link"
+            label="Embed Map Link(Directly from Google Maps Search, Share, Embed copy src link & paste)" type="text" />
 
         <x-form-input name="gr_api"
-            label="Google Review API(Follow the Instructions from https://googlereviews.cws.net & past the value of load_google_reviews from 2nd script)"
+            label="Google Review API(Follow the Instructions from https://googlereviews.cws.net & paste the value of load_google_reviews from 2nd script)"
+            type="text" />
+
+        <x-form-input name="gr_count_api"
+            label="Google Review Count API(Follow the Instructions from https://www.review-widget.net & paste the value of data-uuid from script)"
             type="text" />
         @endwire
         <div class="mt-3">

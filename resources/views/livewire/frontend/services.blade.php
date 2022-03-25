@@ -27,7 +27,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hover:opacity-50">
+                    <div class="hover:opacity-50 hover:rounded-lg">
                         <img src="{{ asset('storage/' . $item->image . '') }}"
                             class="object-cover w-full rounded-lg h-96" alt="{{ $item->title }}" />
                     </div>
