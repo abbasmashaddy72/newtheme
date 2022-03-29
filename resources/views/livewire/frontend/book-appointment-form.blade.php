@@ -3,24 +3,12 @@
     <form class="max-w-xl mx-auto" wire:submit.prevent="submit">
         <div class="flex flex-wrap mb-5 -mx-3">
             <div class="w-full px-3">
-                <label class="block mb-1 text-sm font-medium text-gray-800 dark:text-gray-300">Your Name
+                <label class="block mb-1 text-sm font-medium text-gray-800 dark:text-gray-300">Patient Name
                     <span class="text-red-600">*</span>
-                    <input type="text" class="w-full form-input" placeholder="Enter your name" required
+                    <input type="text" class="w-full form-input" placeholder="Enter Patient name" required
                         wire:model="name" />
                 </label>
                 @error('name')
-                    <span class="text-danger">{{ $message }}</span>
-                @enderror
-            </div>
-        </div>
-        <div class="flex flex-wrap mb-5 -mx-3">
-            <div class="w-full px-3">
-                <label class="block mb-1 text-sm font-medium text-gray-800 dark:text-gray-300">Your Email
-                    <span class="text-red-600">*</span>
-                    <input type="email" class="w-full form-input" placeholder="Enter your Email" required
-                        wire:model="email" />
-                </label>
-                @error('email')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
@@ -33,6 +21,17 @@
                         wire:model="phone" />
                 </label>
                 @error('phone')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
+            </div>
+        </div>
+        <div class="flex flex-wrap mb-5 -mx-3">
+            <div class="w-full px-3">
+                <label class="block mb-1 text-sm font-medium text-gray-800 dark:text-gray-300">Email
+                    <input type="email" class="w-full form-input" placeholder="Enter Email" required
+                        wire:model="email" />
+                </label>
+                @error('email')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
@@ -52,9 +51,9 @@
                 @enderror
             </div>
             <div class="w-full px-3 mb-4 md:w-1/2 md:mb-0">
-                <label class="block mb-1 text-sm font-medium text-gray-800 dark:text-gray-300">Your Age
+                <label class="block mb-1 text-sm font-medium text-gray-800 dark:text-gray-300">Patient Age
                     <span class="text-red-600">*</span>
-                    <input type="number" class="w-full form-input" placeholder="Enter your Age" required
+                    <input type="number" class="w-full form-input" placeholder="Enter Patient Age" required
                         wire:model="age" />
                 </label>
                 @error('age')
@@ -64,20 +63,8 @@
         </div>
         <div class="flex flex-wrap mb-5 -mx-3">
             <div class="w-full px-3">
-                <label class="block mb-1 text-sm font-medium text-gray-800 dark:text-gray-300">Address <span
-                        class="text-red-600">*</span>
-                    <textarea type="text" class="w-full form-input" placeholder="Enter your Address" required
-                        wire:model="address"></textarea>
-                </label>
-                @error('address')
-                    <span class="text-danger">{{ $message }}</span>
-                @enderror
-            </div>
-        </div>
-        <div class="flex flex-wrap mb-5 -mx-3">
-            <div class="w-full px-3">
                 <div class="block mb-3 text-sm font-medium text-gray-800 dark:text-gray-300">Have you previously
-                    attended our facility?<span class="text-red-600"> *</span>
+                    attended our facility?
                 </div>
                 <label class="flex items-center mb-2">
                     <input type="radio" class="form-radio" name="yes" value="1" wire:model='previous_record' />

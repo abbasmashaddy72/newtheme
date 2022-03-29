@@ -64,22 +64,16 @@ class HomeController extends Controller
         $brief_excerpt = Helper::get_static_option('brief_excerpt');
         $achievement_heading = Helper::get_static_option('achievement_heading');
         $achievement_excerpt = Helper::get_static_option('achievement_excerpt');
-        $work_location_heading = Helper::get_static_option('work_location_heading');
-        $work_location_excerpt = Helper::get_static_option('work_location_excerpt');
         $counts = Count::where('for', 'aboutPage')->get();
         $achievements = Achievement::orderBy('year', 'DESC')->get()->groupBy('year');
-        $works = Work::get();
 
         return view('frontend.about', compact(
             'brief_heading',
             'brief_excerpt',
             'achievement_heading',
             'achievement_excerpt',
-            'work_location_heading',
-            'work_location_excerpt',
             'counts',
             'achievements',
-            'works'
         ));
     }
 
@@ -122,8 +116,9 @@ class HomeController extends Controller
     {
         $data = Service::findOrFail($id);
         $gr_api = Helper::get_static_option('gr_api');
+        $gr_count_api = Helper::get_static_option('gr_count_api');
 
-        return view('frontend.single-service', compact('data', 'gr_api'));
+        return view('frontend.single-service', compact('data', 'gr_api', 'gr_count_api'));
     }
 
     public function terms()

@@ -29,10 +29,10 @@
                 <div class="items-center md:grid md:grid-cols-12 md:gap-12 lg:gap-20">
 
                     <!-- Content -->
-                    <div class="mb-8 text-center md:col-span-7 lg:col-span-7 md:mb-0 md:text-left">
-                        <h1 class="mb-4 font-extrabold h1 lg:text-5xl font-red-hat-display" data-aos="fade-down">
+                    <div class="mb-8 text-left md:col-span-7 lg:col-span-7 md:mb-0">
+                        <h1 class="mb-4 font-extrabold h2 lg:text-5xl font-red-hat-display" data-aos="fade-down">
                             Dr. {{ $name }}</h1>
-                        <h2 class="mb-4 font-extrabold h2 lg:text-3xl font-red-hat-display" data-aos="fade-down">
+                        <h2 class="mb-4 font-extrabold h4 lg:text-3xl font-red-hat-display" data-aos="fade-down">
                             {{ $department }}</h2>
                         <p class="text-xl text-gray-600 dark:text-gray-400" data-aos="fade-down" data-aos-delay="150">
                             {{ $about }}</p>
@@ -149,6 +149,15 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Work Locations -->
+    <section class="relative border-t border-gray-200 dark:border-gray-800">
+        <!-- Background gradient -->
+        <div class="absolute inset-0 opacity-25 pointer-events-none bg-gradient-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900"
+            aria-hidden="true"></div>
+        <!-- End background gradient -->
+        @livewire('frontend.work-location')
     </section>
 
     <!-- Services -->

@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('book_appointments', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email');
+            $table->string('email')->nullable();
             $table->string('gender');
             $table->string('phone');
             $table->string('age');
-            $table->string('address');
+            $table->string('address')->nullable();
             $table->string('previous_record');
-            $table->string('previous_record_description');
+            $table->string('previous_record_description')->nullable();
             $table->date('appointment_date');
             $table->time('appointment_time');
             $table->timestamps();

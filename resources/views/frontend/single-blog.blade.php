@@ -109,7 +109,7 @@
                 let vCode = element.attributes.url.value.split('?v=')[1];
                 // paste some BS5 embed code in place of the Figure tag
                 element.parentElement.outerHTML = `
-    <div class="ratio ratio-16x9">
+    <div class="aspect-w-16 aspect-h-9">
         <iframe src="https://www.youtube.com/embed/${vCode}?rel=0" width="800" height="450" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>`;
             });
@@ -124,7 +124,7 @@
                 // paste some BS5 embed code in place of the Figure tag
                 element.parentElement.outerHTML =
                     `
-                <p class="m-2 text-center"><a class="ml-6 text-white bg-teal-500 btn-sm hover:bg-teal-400" href="${href}">${text}</a></p>`;
+                <p class="m-2 text-center"><a class="ml-6 text-white capitalize bg-teal-500 btn-sm hover:bg-teal-400" href="${href}">${text}</a></p>`;
             });
         })
     </script>
