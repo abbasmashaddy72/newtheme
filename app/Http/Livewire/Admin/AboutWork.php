@@ -39,7 +39,7 @@ class AboutWork extends Component
 
     public function store()
     {
-        $this->validate([
+        $validatedData = $this->validate([
             'name' => '',
             'image' => '',
             'location' => '',
@@ -52,13 +52,7 @@ class AboutWork extends Component
             $validatedData['image'] = $this->image->store('work_images');
         }
 
-        Work::create([
-            'name' => $this->name,
-            'location' => $this->location,
-            'timing' => $this->timing,
-            'days' => $this->days,
-            'contact_number' => $this->contact_number,
-        ]);
+        Work::create($validatedData);
 
         $this->resetInput();
     }
@@ -80,7 +74,7 @@ class AboutWork extends Component
 
     public function update()
     {
-        $this->validate([
+        $validatedData = $this->validate([
             'selected_id' => 'required|numeric',
             'name' => '',
             'image' => '',
@@ -99,14 +93,7 @@ class AboutWork extends Component
         if ($this->selected_id) {
             $record = Work::find($this->selected_id);
 
-            $record->update([
-                'name' => $this->name,
-                'image' => $this->image,
-                'location' => $this->location,
-                'timing' => $this->timing,
-                'days' => $this->days,
-                'contact_number' => $this->contact_number,
-            ]);
+            $record->update($validatedData);
 
             $this->resetInput();
 

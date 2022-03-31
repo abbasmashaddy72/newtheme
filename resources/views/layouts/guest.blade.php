@@ -11,7 +11,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ mix('css/app-admin.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 
 <body class="overflow-x-hidden " data-bs-spy="scroll" data-bs-target="#elements-section" data-bs-offset="0" tabindex="0">
@@ -25,7 +25,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ mix('js/app-admin.js') }}" defer></script>
+    <script src="{{ mix('js/app.js') }}" defer></script>
 </body>
 
 </html>

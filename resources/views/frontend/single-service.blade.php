@@ -41,7 +41,7 @@
         </div>
     </section>
 
-    <div class="text-center text-black h2">Reviews</div>
+    <div class="text-center font-red-hat-display h2">Reviews</div>
     @livewire('frontend.testimonials', ['service_id' => $data->id])
     @include('frontend.partials.g-reviews')
 @endpush

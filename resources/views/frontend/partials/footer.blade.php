@@ -31,19 +31,27 @@
 
                     <!-- 2nd block -->
                     <div class="text-sm">
-                        <h6 class="mb-2 font-medium uppercase">Products</h6>
+                        <h6 class="mb-2 font-medium uppercase">UseFull Links</h6>
                         <ul>
                             <li class="mb-1">
                                 <a class="text-gray-600 transition duration-150 ease-in-out dark:text-gray-400 hover:underline"
-                                    href="#0">Drag And Drop</a>
+                                    href="{{ route('about') }}">About</a>
                             </li>
                             <li class="mb-1">
                                 <a class="text-gray-600 transition duration-150 ease-in-out dark:text-gray-400 hover:underline"
-                                    href="#0">Visual Studio X</a>
+                                    href="{{ route('services') }}">Services</a>
                             </li>
                             <li class="mb-1">
                                 <a class="text-gray-600 transition duration-150 ease-in-out dark:text-gray-400 hover:underline"
-                                    href="#0">Easy Content</a>
+                                    href="{{ route('blogs') }}">Blogs</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="text-gray-600 transition duration-150 ease-in-out dark:text-gray-400 hover:underline"
+                                    href="{{ route('book.appointment') }}">Book Appointment</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="text-gray-600 transition duration-150 ease-in-out dark:text-gray-400 hover:underline"
+                                    href="{{ route('contact.us') }}">Contact Us</a>
                             </li>
                         </ul>
                     </div>
@@ -137,8 +145,5 @@
         <div class="mr-4 text-sm text-gray-600 dark:text-gray-400">&copy; {{ date('Y') }} UMDAA. All rights
             reserved.</div>
 
-    </div>
-
-    </div>
     </div>
 </footer>

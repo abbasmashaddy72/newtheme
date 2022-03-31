@@ -12,8 +12,8 @@
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
                 @foreach ($works as $item)
                     <div class="relative h-0 pb-9/16 sm:pb-1/1">
-                        <img class="absolute inset-0 object-cover w-full h-full" src="{{ $item->image }}" width="240"
-                            height="240" alt="Career 03" />
+                        <img class="absolute inset-0 object-cover w-full h-full"
+                            src="{{ asset('storage/' . $item->image) }}" width="240" height="240" alt="Career 03" />
                         <div class="absolute inset-0 opacity-75 bg-gradient-to-t from-gray-900 via-gray-700"
                             aria-hidden="true">
                         </div>

@@ -110,7 +110,7 @@
 
                         <!-- Popular posts -->
                         <div class="mb-8">
-                            <h4 class="mb-5 h4 font-red-hat-display">Popular on Simple</h4>
+                            <h4 class="mb-5 h4 font-red-hat-display">Popular</h4>
                             <ul class="-my-3">
                                 @php
                                     $i = 1;
