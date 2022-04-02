@@ -16,8 +16,10 @@ class Edit extends Component
     public $name;
     public $department;
     public $about;
-    public $action_button_text;
-    public $action_button_link;
+    public $top_action_button_text;
+    public $bottom_action_button_text;
+    public $top_action_button_link;
+    public $bottom_action_button_link;
     public $why_points;
     public $hero_img;
     public $hero_video;
@@ -43,8 +45,10 @@ class Edit extends Component
         $this->name = Helper::get_static_option('name');
         $this->department = Helper::get_static_option('department');
         $this->about = Helper::get_static_option('about');
-        $this->action_button_text = Helper::get_static_option('action_button_text');
-        $this->action_button_link = Helper::get_static_option('action_button_link');
+        $this->top_action_button_text = Helper::get_static_option('top_action_button_text');
+        $this->bottom_action_button_text = Helper::get_static_option('bottom_action_button_text');
+        $this->top_action_button_link = Helper::get_static_option('top_action_button_link');
+        $this->bottom_action_button_link = Helper::get_static_option('bottom_action_button_link');
         $this->why_points = Helper::get_static_option('why_points');
         $this->hero_img = Helper::get_static_option('hero_img');
         $this->hero_video = Helper::get_static_option('hero_video');
@@ -65,8 +69,10 @@ class Edit extends Component
         'name' => '',
         'department' => '',
         'about' => '',
-        'action_button_text' => '',
-        'action_button_link' => '',
+        'top_action_button_text' => '',
+        'bottom_action_button_text' => '',
+        'top_action_button_link' => '',
+        'bottom_action_button_link' => '',
         'why_points' => '',
         'hero_img' => '',
         'hero_video' => '',

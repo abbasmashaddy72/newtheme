@@ -33,8 +33,10 @@ class HomeController extends Controller
     {
         $department = Helper::get_static_option('department');
         $about = Helper::get_static_option('about');
-        $action_button_text = Helper::get_static_option('action_button_text');
-        $action_button_link = Helper::get_static_option('action_button_link');
+        $top_action_button_text = Helper::get_static_option('top_action_button_text');
+        $bottom_action_button_text = Helper::get_static_option('bottom_action_button_text');
+        $top_action_button_link = Helper::get_static_option('top_action_button_link');
+        $bottom_action_button_link = Helper::get_static_option('bottom_action_button_link');
         $why_points = explode(';', Helper::get_static_option('why_points'));
         $hero_img = Helper::get_static_option('hero_img');
         $hero_video = Helper::get_static_option('hero_video');
@@ -46,8 +48,10 @@ class HomeController extends Controller
         return view('frontend.main', compact(
             'department',
             'about',
-            'action_button_text',
-            'action_button_link',
+            'top_action_button_text',
+            'bottom_action_button_text',
+            'top_action_button_link',
+            'bottom_action_button_link',
             'why_points',
             'hero_img',
             'hero_video',

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "82aa2284cff0206f389ff755115af7f1",
+    "content-hash": "18dd5a4de9b5b2575e9f4c869ee2c2a7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2396,16 +2396,16 @@
         },
         {
             "name": "mediconesystems/livewire-datatables",
-            "version": "v0.7.0",
+            "version": "v0.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MedicOneSystems/livewire-datatables.git",
-                "reference": "cb527079f2c184d279c194b1a12b53a380e396d1"
+                "reference": "2701203bfe964d36eb8bdd9ce9c3f3f903cfbebc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MedicOneSystems/livewire-datatables/zipball/cb527079f2c184d279c194b1a12b53a380e396d1",
-                "reference": "cb527079f2c184d279c194b1a12b53a380e396d1",
+                "url": "https://api.github.com/repos/MedicOneSystems/livewire-datatables/zipball/2701203bfe964d36eb8bdd9ce9c3f3f903cfbebc",
+                "reference": "2701203bfe964d36eb8bdd9ce9c3f3f903cfbebc",
                 "shasum": ""
             },
             "require": {
@@ -2453,9 +2453,9 @@
             ],
             "support": {
                 "issues": "https://github.com/MedicOneSystems/livewire-datatables/issues",
-                "source": "https://github.com/MedicOneSystems/livewire-datatables/tree/v0.7.0"
+                "source": "https://github.com/MedicOneSystems/livewire-datatables/tree/v0.9.3"
             },
-            "time": "2022-02-22T11:02:59+00:00"
+            "time": "2022-03-28T13:58:30+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",

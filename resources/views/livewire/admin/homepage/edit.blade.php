@@ -10,9 +10,13 @@
 
         <x-form-textarea name="about" label="About" type="text" />
 
-        <x-form-input name="action_button_text" label="Action Button Text" type="text" />
+        <x-form-input name="top_action_button_text" label="Top Action Button Text" type="text" />
 
-        <x-form-input name="action_button_link" label="Action Button Link" type="text" />
+        <x-form-input name="top_action_button_link" label="Top Action Button Link" type="text" />
+
+        <x-form-input name="bottom_action_button_text" label="Bottom Action Button Text" type="text" />
+
+        <x-form-input name="bottom_action_button_link" label="Bottom Action Button Link" type="text" />
 
         <x-form-textarea name="why_points" label="Why Points (Separated with ';')" type="text" />
 

@@ -12589,6 +12589,10 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
+  .md\:py-12{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
   .md\:pb-20{
     padding-bottom: 5rem;
   }

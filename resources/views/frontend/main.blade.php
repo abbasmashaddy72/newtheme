@@ -39,7 +39,7 @@
                         <div class="flex flex-col justify-center max-w-sm mx-auto mt-8 sm:flex-row sm:max-w-md md:mx-0"
                             data-aos="fade-down" data-aos-delay="300">
                             <a class="text-white bg-teal-500 btn hover:bg-teal-400 shrink-0"
-                                href="{{ $action_button_link }}">{{ $action_button_text }}</a>
+                                href="{{ $top_action_button_link }}">{{ $top_action_button_text }}</a>
                         </div>
                         <ul class="max-w-sm mx-auto mt-8 -mb-2 text-gray-600 sm:max-w-md md:max-w-none dark:text-gray-400"
                             data-aos="fade-down" data-aos-delay="450">
@@ -169,7 +169,7 @@
 
     <!-- Testimonials -->
     <section class="border-t border-transparent dark:border-gray-800">
-        <div class="py-12 md:py-20">
+        <div class="py-12 md:py-12">
 
             <div class="max-w-6xl px-4 mx-auto sm:px-6">
 
@@ -190,36 +190,13 @@
         </div>
     </section>
 
-    <!-- Sign Up -->
-    <section>
+    <section class="border-t border-transparent dark:border-gray-800">
         <div class="max-w-6xl px-4 mx-auto sm:px-6">
 
-            <!-- CTA box -->
-            <div class="relative bg-gray-800 dark">
-
-                <!-- Background illustration -->
-                <div class="absolute inset-0 left-auto pointer-events-none" aria-hidden="true">
-                    <svg class="h-full" width="400" height="232" viewBox="0 0 400 232"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="39.386%" id="box-gr-a">
-                                <stop stop-color="#667EEA" offset="0%" />
-                                <stop stop-color="#667EEA" stop-opacity="0" offset="100%" />
-                            </radialGradient>
-                            <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="39.386%" id="box-gr-b">
-                                <stop stop-color="#3ABAB4" offset="0%" />
-                                <stop stop-color="#3ABAB4" stop-opacity="0" offset="100%" />
-                            </radialGradient>
-                        </defs>
-                        <g transform="translate(-85 -369)" fill="none" fill-rule="evenodd">
-                            <circle fill-opacity=".16" fill="url(#box-gr-a)" cx="413" cy="688" r="240" />
-                            <circle fill-opacity=".24" fill="url(#box-gr-b)" cx="400" cy="400" r="400" />
-                        </g>
-                    </svg>
-                </div>
-
-                @livewire('frontend.newsletter')
-
+            <!-- Section header -->
+            <div class="max-w-3xl pb-12 mx-auto text-center">
+                <a class="text-white bg-teal-500 btn hover:bg-teal-400 shrink-0"
+                    href="{{ $bottom_action_button_link }}">{{ $bottom_action_button_text }}</a>
             </div>
 
         </div>
