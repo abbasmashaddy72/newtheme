@@ -1,4 +1,11 @@
 @extends('frontend.index')
+@push('meta')
+    @include('frontend.partials.meta', [
+        'title' => 'Contact Us',
+        'description' => 'Contact Dr Ayesha Khaliq',
+        'keywords' => Helper::get_static_option('contact_us_keywords'),
+    ])
+@endpush
 @push('main')
     <section class="relative">
         <div class="max-w-6xl px-4 pt-16 mx-auto sm:px-6">

@@ -12,7 +12,6 @@ class Edit extends Component
 
     public $blog;
 
-    public $service_id;
     public $title;
     public $image;
     public $tags;
@@ -25,7 +24,6 @@ class Edit extends Component
     public function mount($blog)
     {
         $data = Blog::findOrFail($blog);
-        $this->service_id = $data->service_id;
         $this->title = $data->title;
         $this->image = $data->image;
         $this->tags = $data->tags;
@@ -34,7 +32,6 @@ class Edit extends Component
     }
 
     protected $rules = [
-        'service_id' => '',
         'title' => '',
         'image' => '',
         'tags' => '',

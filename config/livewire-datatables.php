@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'default_time_format' => 'h:i A',
+    'default_time_format' => 'H:i',
     'default_date_format' => 'd/m/Y',
 
     /*
@@ -54,7 +54,17 @@ return [
     |
     */
 
-    'model_namespace' => 'App\Models',
+    'model_namespace' => 'App',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Default Sortable
+    |--------------------------------------------------------------------------
+    | Should a column of a datatable be sortable by default ?
+    |
+    */
+
+    'default_sortable' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -72,6 +82,6 @@ return [
             'odd' => 'divide-x divide-gray-100 text-sm text-gray-900 bg-gray-50',
             'selected' => 'divide-x divide-gray-100 text-sm text-gray-900 bg-yellow-100',
         ],
-        'cell' => 'text-sm text-gray-900',
+        'cell' => 'whitespace-no-wrap text-sm text-gray-900 px-6 py-2',
     ],
 ];

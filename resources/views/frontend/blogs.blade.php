@@ -1,13 +1,13 @@
 @extends('frontend.index')
+@push('meta')
+    @include('frontend.partials.meta', [
+        'title' => 'Blogs',
+        'description' => 'These are the Blogs Written by Dr Ayesha Khaliq',
+        'keywords' => Helper::get_static_option('blogs_keywords'),
+    ])
+@endpush
 @push('main')
     <section class="relative">
-
-        <!-- Background image -->
-        <div class="box-content absolute inset-0 pt-16 h-128 -z-1">
-            <img class="absolute inset-0 object-cover w-full h-full opacity-25"
-                src="{{ asset('storage/' . $top_one->image) }}" width="1440" height="577" alt="About" />
-            <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900" aria-hidden="true"></div>
-        </div>
 
         <div class="relative max-w-6xl px-4 mx-auto sm:px-6">
             <div class="pt-32 pb-12 md:pt-40 md:pb-16">

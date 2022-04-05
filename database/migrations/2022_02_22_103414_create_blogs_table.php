@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('service_id')->constrained('services')->onUpdate('cascade')->onDelete('cascade');
             $table->string('title');
             $table->string('image')->nullable();
             $table->text('tags')->nullable();

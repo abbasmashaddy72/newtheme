@@ -2,15 +2,16 @@
 @push('styles')
     @include('components.admin.form.ckeditor_style')
 @endpush
+@push('meta')
+    @include('frontend.partials.meta', [
+        'title' => $data->title,
+        'description' => $data->excerpt,
+        'image' => '//images.weserv.nl/?url=' . asset('storage/' . $data->image) . '&w=200&h=200',
+        'keywords' => $data->keywords,
+    ])
+@endpush
 @push('main')
     <section class="relative">
-
-        <!-- Background image -->
-        <div class="box-content absolute inset-0 pt-16 h-128">
-            <img class="absolute inset-0 object-cover w-full h-full opacity-25"
-                src="{{ asset('storage/' . $data->image) }}" width="1440" height="577" alt="{{ $data->title }}" />
-            <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900" aria-hidden="true"></div>
-        </div>
 
         <div class="relative max-w-6xl px-4 mx-auto sm:px-6">
             <div class="pt-32 pb-12 md:pt-40 md:pb-20">
@@ -23,8 +24,8 @@
                             <!-- Title and excerpt -->
                             <h1 class="mb-4 text-center h2 font-red-hat-display" data-aos="fade-down">
                                 {{ $data->title }}</h1>
-                            <p class="text-xl text-left text-gray-600 dark:text-gray-400" data-aos="fade-down"
-                                data-aos-delay="150">{{ $data->excerpt }}</p>
+                            <p class="text-xl text-justify text-gray-600 sm:text-left dark:text-gray-400"
+                                data-aos="fade-down" data-aos-delay="150">{{ $data->excerpt }}</p>
                         </header>
 
                         <!-- Article content -->

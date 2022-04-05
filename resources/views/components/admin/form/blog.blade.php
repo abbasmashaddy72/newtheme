@@ -1,7 +1,4 @@
 @wire('debounce.200ms')
-<x-form-select name="service_id" label="Service Name" :options="Helper::getKeyValues('Service', 'title', 'id')"
-    placeholder="Please" />
-
 <x-form-input name="title" label="Title" type="text" />
 
 <x-form-input name="tags" label="Tags" type="text" />

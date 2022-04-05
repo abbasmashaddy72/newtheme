@@ -88,7 +88,7 @@ class HomeController extends Controller
 
         $next_top_four = Blog::orderBy('clicks', 'DESC')->whereNotIn('id', [$top_one->id])->limit(4)->get();
 
-        $distinct_top_five = Blog::orderBy('clicks', 'DESC')->distinct('service_id')->limit(5)->get();
+        $distinct_top_five = Blog::orderBy('clicks', 'DESC')->limit(5)->get();
 
         return view('frontend.blogs', compact(
             'top_one',
@@ -101,12 +101,8 @@ class HomeController extends Controller
     {
         $data = Blog::findOrFail($id);
         Blog::where('id', $id)->increment('clicks');
-        $related_blogs = Blog::where('service_id', $data->service_id)->limit(2)->get();
 
-        return view('frontend.single-blog', compact(
-            'data',
-            'related_blogs'
-        ));
+        return view('frontend.single-blog', compact('data'));
     }
 
     public function services()

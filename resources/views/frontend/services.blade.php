@@ -1,4 +1,11 @@
 @extends('frontend.index')
+@push('meta')
+    @include('frontend.partials.meta', [
+        'title' => 'Services',
+        'description' => 'These are Some the Services Provided by Dr. Ayesha Khaliq',
+        'keywords' => Helper::get_static_option('services_keywords'),
+    ])
+@endpush
 @push('main')
     <section class="relative">
         <div class="max-w-6xl px-4 pt-16 mx-auto sm:px-6">

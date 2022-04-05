@@ -11,6 +11,7 @@ class Create extends Component
     use WithFileUploads;
 
     public $title;
+    public $keywords;
     public $image;
     public $excerpt;
     public $description;
@@ -20,6 +21,7 @@ class Create extends Component
 
     protected $rules = [
         'title' => '',
+        'keywords' => '',
         'image' => '',
         'excerpt' => '',
         'description' => '',

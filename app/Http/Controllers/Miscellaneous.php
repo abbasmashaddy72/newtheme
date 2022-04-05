@@ -54,4 +54,9 @@ class Miscellaneous extends Controller
     {
         return view('admin.pages.booked_appointment');
     }
+
+    public function keywords()
+    {
+        return view('admin.pages.keywords');
+    }
 }

@@ -13,6 +13,7 @@ class Edit extends Component
     public $service;
 
     public $title;
+    public $keywords;
     public $image;
     public $excerpt;
     public $description;
@@ -24,6 +25,7 @@ class Edit extends Component
     {
         $data = Service::findOrFail($service);
         $this->title = $data->title;
+        $this->keywords = $data->keywords;
         $this->image = $data->image;
         $this->excerpt = $data->excerpt;
         $this->description = $data->description;
@@ -31,6 +33,7 @@ class Edit extends Component
 
     protected $rules = [
         'title' => '',
+        'keywords' => '',
         'image' => '',
         'excerpt' => '',
         'description' => '',

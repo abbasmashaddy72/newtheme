@@ -13,7 +13,6 @@ class Blog extends Model implements HasMedia
     use HasFactory, InteractsWithMedia;
 
     protected $fillable = [
-        'service_id',
         'title',
         'image',
         'tags',
@@ -21,11 +20,6 @@ class Blog extends Model implements HasMedia
         'description',
         'clicks'
     ];
-
-    public function service()
-    {
-        return $this->belongsTo(Service::class);
-    }
 
     public function registerMediaConversions(Media $media = null): void
     {

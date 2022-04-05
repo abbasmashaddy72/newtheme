@@ -10,7 +10,6 @@ class Create extends Component
 {
     use WithFileUploads;
 
-    public $service_id;
     public $title;
     public $image;
     public $tags;
@@ -21,7 +20,6 @@ class Create extends Component
     public $hero_img = false;
 
     protected $rules = [
-        'service_id' => '',
         'title' => '',
         'image' => '',
         'tags' => '',

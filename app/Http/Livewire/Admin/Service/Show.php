@@ -10,6 +10,7 @@ class Show extends Component
     public $service;
 
     public $title;
+    public $keywords;
     public $icon;
     public $image;
     public $excerpt;
@@ -22,6 +23,7 @@ class Show extends Component
     {
         $data = Service::findOrFail($service);
         $this->title = $data->title;
+        $this->keywords = $data->keywords;
         $this->image = $data->image;
         $this->excerpt = $data->excerpt;
         $this->description = $data->description;

@@ -1,4 +1,11 @@
 @extends('frontend.index')
+@push('meta')
+    @include('frontend.partials.meta', [
+        'title' => 'Book Appointment',
+        'description' => 'Book Appointment for Dr. Ayesha Khaliq',
+        'keywords' => Helper::get_static_option('book_appointment_keywords'),
+    ])
+@endpush
 @push('main')
     <section class="relative">
         <div class="max-w-6xl px-4 pt-16 mx-auto sm:px-6">

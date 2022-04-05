@@ -1,4 +1,11 @@
 @extends('frontend.index')
+@push('meta')
+    @include('frontend.partials.meta', [
+        'title' => 'About',
+        'description' => $brief_excerpt,
+        'keywords' => Helper::get_static_option('about_keywords'),
+    ])
+@endpush
 @push('main')
     <section class="relative">
         <div class="max-w-6xl px-4 pt-16 mx-auto sm:px-6">
@@ -7,7 +14,7 @@
                 <!-- Section header -->
                 <div class="max-w-3xl pb-12 mx-auto text-center md:pb-20">
                     <h2 class="mb-4 h2 font-red-hat-display">{{ $brief_heading }}</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-400">{{ $brief_excerpt }}</p>
+                    <p class="text-xl text-justify text-gray-600 dark:text-gray-400">{{ $brief_excerpt }}</p>
                 </div>
 
                 <!-- Items -->

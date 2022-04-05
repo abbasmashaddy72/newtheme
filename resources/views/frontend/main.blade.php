@@ -1,4 +1,10 @@
 @extends('frontend.index')
+@push('meta')
+    @include('frontend.partials.meta', [
+        'image' => '//images.weserv.nl/?url='.asset('storage/' . $hero_img).'&w=200&h=200',
+        'keywords' => Helper::get_static_option('home_keywords'),
+    ])
+@endpush
 @push('main')
     <!-- Page illustration -->
     <div class="relative h-0 max-w-6xl mx-auto pointer-events-none -z-1" aria-hidden="true">
@@ -34,7 +40,8 @@
                             Dr. {{ $name }}</h1>
                         <h2 class="mb-4 font-extrabold h4 lg:text-3xl font-red-hat-display" data-aos="fade-down">
                             {{ $department }}</h2>
-                        <p class="text-xl text-gray-600 dark:text-gray-400" data-aos="fade-down" data-aos-delay="150">
+                        <p class="text-xl text-justify text-gray-600 sm:text-left dark:text-gray-400" data-aos="fade-down"
+                            data-aos-delay="150">
                             {{ $about }}</p>
                         <div class="flex flex-col justify-center max-w-sm mx-auto mt-8 sm:flex-row sm:max-w-md md:mx-0"
                             data-aos="fade-down" data-aos-delay="300">

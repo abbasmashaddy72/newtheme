@@ -2,6 +2,13 @@
 @push('styles')
     @include('components.admin.form.ckeditor_style')
 @endpush
+@push('meta')
+    @include('frontend.partials.meta', [
+        'title' => 'Privacy & Policies',
+        'description' => 'Please Read Privacy & Policies Carefully',
+        'keywords' => Helper::get_static_option('privacy_keywords')
+    ])
+@endpush
 @push('main')
     <section class="relative">
         <div class="max-w-6xl px-4 pt-16 mx-auto sm:px-6">

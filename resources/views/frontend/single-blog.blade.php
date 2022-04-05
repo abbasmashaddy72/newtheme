@@ -2,15 +2,16 @@
 @push('styles')
     @include('components.admin.form.ckeditor_style')
 @endpush
+@push('meta')
+    @include('frontend.partials.meta', [
+        'title' => $data->title,
+        'description' => $data->excerpt,
+        'image' => '//images.weserv.nl/?url=' . asset('storage/' . $data->image) . '&w=200&h=200',
+        'keywords' => $data->tags,
+    ])
+@endpush
 @push('main')
     <section class="relative">
-
-        <!-- Background image -->
-        <div class="box-content absolute inset-0 pt-16 h-128">
-            <img class="absolute inset-0 object-cover w-full h-full opacity-25"
-                src="{{ asset('storage/' . $data->image) }}" width="1440" height="577" alt="About" />
-            <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900" aria-hidden="true"></div>
-        </div>
 
         <div class="relative max-w-6xl px-4 mx-auto sm:px-6">
             <div class="pt-32 pb-12 md:pt-40 md:pb-20">
@@ -23,8 +24,8 @@
                             <!-- Title and excerpt -->
                             <div class="text-center md:text-left">
                                 <h1 class="mb-4 h1 font-red-hat-display" data-aos="fade-down">{{ $data->title }}</h1>
-                                <p class="text-xl text-gray-600 dark:text-gray-400" data-aos="fade-down"
-                                    data-aos-delay="150">{{ $data->excerpt }}</p>
+                                <p class="text-xl text-justify text-gray-600 sm:text-left dark:text-gray-400"
+                                    data-aos="fade-down" data-aos-delay="150">{{ $data->excerpt }}</p>
                             </div>
                             <!-- Article meta -->
                             <div class="mt-5 md:flex md:items-center md:justify-between">
@@ -59,46 +60,6 @@
             </div>
         </div>
     </section>
-    <aside>
-        <div class="relative max-w-6xl px-4 mx-auto sm:px-6">
-            <div class="pb-12 md:pb-20">
-                <div class="max-w-3xl mx-auto">
-
-                    <h4 class="mb-8 h4 font-red-hat-display">Related Blogs</h4>
-
-                    <!-- Articles container -->
-                    <div class="grid gap-4 sm:gap-6 sm:grid-cols-2" data-aos-id-relposts>
-
-                        <!-- 1st article -->
-                        @foreach ($related_blogs as $item)
-                            <article class="relative p-6 text-white group" data-aos="fade-down"
-                                data-aos-anchor="[data-aos-id-relposts]">
-                                <figure>
-                                    <img class="absolute inset-0 object-cover w-full h-full transition duration-700 ease-out opacity-50 group-hover:opacity-75"
-                                        src="{{ $item->image }}" width="372" height="182" alt="Related post 01" />
-                                    <div class="absolute inset-0 transition duration-700 ease-out bg-teal-500 opacity-75 group-hover:opacity-50"
-                                        aria-hidden="true"></div>
-                                </figure>
-                                <div class="relative flex flex-col h-full">
-                                    <header class="grow">
-                                        <a class="hover:underline" href="{{ route('single-blog', [$item->id]) }}">
-                                            <h3 class="mb-2 text-lg font-bold tracking-tight font-red-hat-display">
-                                                {{ $item->title }}
-                                            </h3>
-                                            <p class="" data-aos="fade-down" data-aos-delay="150">
-                                                {{ $item->excerpt }}</p>
-                                        </a>
-                                        <div class="text-sm opacity-80">{{ $item->created_at->diffForHumans() }}</div>
-                                    </header>
-                                </div>
-                            </article>
-                        @endforeach
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </aside>
 @endpush
 @push('scripts')
     <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>

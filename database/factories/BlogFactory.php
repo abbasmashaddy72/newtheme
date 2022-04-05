@@ -25,7 +25,6 @@ class BlogFactory extends Factory
         }
 
         return [
-            'service_id' => Service::pluck('id')[$this->faker->numberBetween(1, Service::count() - 1)],
             'title' => $this->faker->name(),
             'image' => null,
             'tags' => null,
