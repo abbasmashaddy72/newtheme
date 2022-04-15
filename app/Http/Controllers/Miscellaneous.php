@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Psr\Http\Message\UriInterface;
+use Spatie\Sitemap\SitemapGenerator;
 
 class Miscellaneous extends Controller
 {
@@ -58,5 +60,12 @@ class Miscellaneous extends Controller
     public function keywords()
     {
         return view('admin.pages.keywords');
+    }
+
+    public function genSitemap()
+    {
+        SitemapGenerator::create(config('app.url'))->writeToFile('sitemap.xml');
+
+        echo "generated";
     }
 }

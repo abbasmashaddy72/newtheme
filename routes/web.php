@@ -112,4 +112,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'App\H
     Route::resource('service', 'ServiceController');
     Route::resource('static-option', 'StaticOptionController');
     Route::post('image_upload', 'Miscellaneous@image_upload')->name('ckeditor.upload');
+    Route::get('gen-sitemap', 'Miscellaneous@genSitemap')->name('sitemap.gen');
 });
