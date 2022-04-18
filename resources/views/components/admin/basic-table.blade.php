@@ -34,6 +34,8 @@
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="flex items-center">
                                             <h6 class="text-base font-medium">{!! $value->count !!}</h6>
+                                            <img src="{{ url('storage/' . $value->image) }}" height="auto"
+                                                width="200" />
                                         </div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">

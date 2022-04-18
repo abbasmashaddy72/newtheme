@@ -7,6 +7,7 @@ use App\Models\Blog;
 use App\Models\Count;
 use App\Models\Review;
 use App\Models\Service;
+use App\Models\Slider;
 use App\Models\Work;
 use App\Services\Helper;
 
@@ -44,6 +45,7 @@ class HomeController extends Controller
         $counts = Count::where('for', 'homePage')->get();
         $gr_api = Helper::get_static_option('gr_api');
         $gr_count_api = Helper::get_static_option('gr_count_api');
+        $slider_images = Slider::where('where', 'homePage')->get();
 
         return view('frontend.main', compact(
             'department',
@@ -58,7 +60,8 @@ class HomeController extends Controller
             'testimonials_excerpt',
             'counts',
             'gr_api',
-            'gr_count_api'
+            'gr_count_api',
+            'slider_images'
         ));
     }
 
