@@ -67,7 +67,7 @@
                                     <span class="block w-12 truncate">{{ $year }}</span>
                                     <span
                                         class="block w-3.5 h-3.5 bg-gray-400 dark:bg-gray-700 border-2 border-white dark:border-gray-900 rounded-full"
-                                        :class="{ 'bg-teal-500 dark:bg-teal-500' : year === '{{ $year }}' }"></span>
+                                        :class="{ 'bg-blue-500 dark:bg-blue-500': year === '{{ $year }}' }"></span>
                                 </button>
                             @endforeach
                         </div>

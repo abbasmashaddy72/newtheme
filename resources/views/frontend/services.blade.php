@@ -12,7 +12,7 @@
 
             @if (Jenssegers\Agent\Facades\Agent::isMobile() || Jenssegers\Agent\Facades\Agent::isTablet())
                 <div class="flex flex-wrap items-center justify-end mt-2">
-                    <a class="ml-6 text-right text-white bg-teal-500 btn-sm hover:bg-teal-400"
+                    <a class="ml-6 text-right text-white bg-blue-500 btn-sm hover:bg-blue-300"
                         href="{{ route('book.appointment') }}">Book
                         Appointment</a>
                 </div>

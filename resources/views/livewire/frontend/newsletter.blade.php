@@ -5,7 +5,7 @@
         <div class="relative flex flex-col justify-center max-w-xs mx-auto sm:flex-row sm:max-w-sm sm:px-4">
             <input type="email" class="w-full px-4 py-2 mb-2 form-input sm:mb-0 sm:mr-2" placeholder="Your email"
                 wire:model="email" aria-label="Your email" />
-            <button class="text-white bg-teal-500 btn-sm hover:bg-teal-400 shrink-0" type="submit">Subscribe</button>
+            <button class="text-white bg-blue-500 btn-sm hover:bg-blue-300 shrink-0" type="submit">Subscribe</button>
             <svg class="absolute hidden -mt-3 sm:block left-full" width="42" height="44" viewBox="0 0 42 44"
                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path class="text-gray-600 fill-current"

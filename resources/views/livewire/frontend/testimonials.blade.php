@@ -8,7 +8,7 @@
                         <img src="{{ asset('storage/' . $item->image . '') }}" alt="image of profile"
                             class="flex-shrink-0 object-cover w-full h-full rounded shadow-lg object-fit" />
                         <div
-                            class="absolute bottom-0 flex items-center justify-center w-32 h-32 -mr-16 bg-indigo-100 rounded-full md:top-0 md:right-0 -mt-14">
+                            class="absolute bottom-0 flex items-center justify-center w-24 h-24 -mr-16 bg-indigo-100 rounded-full md:top-0 md:right-0 -mt-14">
                             <a class="transition duration-150 ease-in-out cursor-pointer hover:opacity-75"
                                 @click.prevent="modalExpanded{{ str_replace(' ', '', $item->name) }} = true"
                                 aria-controls="modal">

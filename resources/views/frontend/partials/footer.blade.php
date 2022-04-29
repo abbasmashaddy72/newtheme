@@ -73,13 +73,13 @@
     </div>
 
     <!-- Bottom area -->
-    <div class="md:flex md:items-center md:justify-between">
+    <div class="pb-4 md:flex md:items-center md:justify-between">
 
         <!-- Social links -->
         <ul class="flex mb-4 md:order-2 md:ml-4 md:mb-0">
             {{-- Twitter --}}
             <li>
-                <a class="flex items-center justify-center text-white transition duration-150 ease-in-out bg-teal-500 rounded-full dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600"
+                <a class="flex items-center justify-center text-white transition duration-150 ease-in-out bg-blue-500 rounded-full dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600"
                     href="{{ $twitter }}" aria-label="Twitter">
                     <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -89,7 +89,7 @@
             </li>
             {{-- FaceBook --}}
             <li class="ml-4">
-                <a class="flex items-center justify-center text-white transition duration-150 ease-in-out bg-teal-500 rounded-full dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600"
+                <a class="flex items-center justify-center text-white transition duration-150 ease-in-out bg-blue-500 rounded-full dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600"
                     href="{{ $facebook }}" aria-label="Facebook">
                     <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -99,7 +99,7 @@
             </li>
             {{-- Instagram --}}
             <li class="ml-4">
-                <a class="flex items-center justify-center text-white transition duration-150 ease-in-out bg-teal-500 rounded-full dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600"
+                <a class="flex items-center justify-center text-white transition duration-150 ease-in-out bg-blue-500 rounded-full dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600"
                     href="{{ $instagram }}" aria-label="Instagram">
                     <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="20.145" cy="11.892" r="1" />
@@ -112,7 +112,7 @@
             </li>
             {{-- LinkIdInn --}}
             <li class="ml-4">
-                <a class="flex items-center justify-center text-white transition duration-150 ease-in-out bg-teal-500 rounded-full dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600"
+                <a class="flex items-center justify-center text-white transition duration-150 ease-in-out bg-blue-500 rounded-full dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600"
                     href="{{ $linkedin }}" aria-label="Linkedin">
                     <svg class="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -122,7 +122,7 @@
             </li>
             {{-- Google Business --}}
             <li class="ml-4">
-                <a class="flex items-center justify-center text-white transition duration-150 ease-in-out bg-teal-500 rounded-full dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600"
+                <a class="flex items-center justify-center text-white transition duration-150 ease-in-out bg-blue-500 rounded-full dark:text-teal-500 dark:bg-gray-800 hover:underline hover:bg-teal-600"
                     href="{{ $google_business }}" aria-label="Google My Business">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 fill-current" viewBox="-1 -1 32 32">
                         <path

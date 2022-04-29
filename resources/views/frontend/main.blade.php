@@ -55,10 +55,10 @@
                         <div class="swiper-wrapper">
                             <!-- Slides -->
                             @foreach ($slider_images as $item)
-                                <div class="p-4 swiper-slide">
+                                <div class="swiper-slide">
                                     <div class="flex flex-col overflow-hidden rounded shadow">
                                         <div class="flex-shrink-0">
-                                            <img class="object-cover w-full h-4/5"
+                                            <img class="object-cover w-auto h-96 md:h-4/5"
                                                 src="{{ url('storage/' . $item->image) }}" alt="">
                                         </div>
                                     </div>
@@ -100,7 +100,7 @@
                             {{ $about }}</p>
                         <div class="flex flex-col justify-center max-w-sm mx-auto mt-8 sm:flex-row sm:max-w-md md:mx-0"
                             data-aos="fade-down" data-aos-delay="300">
-                            <a class="text-white bg-teal-500 btn hover:bg-teal-400 shrink-0"
+                            <a class="text-white bg-blue-500 btn hover:bg-blue-300 shrink-0"
                                 href="{{ $top_action_button_link }}">{{ $top_action_button_text }}</a>
                         </div>
                         <ul class="max-w-sm mx-auto mt-8 -mb-2 text-gray-600 sm:max-w-md md:max-w-none dark:text-gray-400"
@@ -153,7 +153,7 @@
                             <!-- Play button -->
                             <a class="absolute transition duration-150 ease-in-out cursor-pointer hover:opacity-75"
                                 @click.prevent="modalExpanded = true" aria-controls="modal">
-                                <img src="{{ asset('svg/play-button.svg') }}" width="96" height="96" alt="Play" />
+                                <img src="{{ asset('svg/play-button.svg') }}" width="80" height="80" alt="Play" />
                             </a>
                         </div>
 
@@ -257,7 +257,7 @@
 
             <!-- Section header -->
             <div class="max-w-3xl pb-12 mx-auto text-center">
-                <a class="text-white bg-teal-500 btn hover:bg-teal-400 shrink-0"
+                <a class="text-white bg-blue-500 btn hover:bg-blue-300 shrink-0"
                     href="{{ $bottom_action_button_link }}">{{ $bottom_action_button_text }}</a>
             </div>
 

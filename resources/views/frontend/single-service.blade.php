@@ -70,7 +70,7 @@
                 // paste some BS5 embed code in place of the Figure tag
                 element.parentElement.outerHTML =
                     `
-                <p class="m-2 text-center"><a class="ml-6 text-white capitalize bg-teal-500 btn-sm hover:bg-teal-400" href="${href}">${text}</a></p>`;
+                <p class="m-2 text-center"><a class="ml-6 text-white capitalize bg-blue-500 btn-sm hover:bg-blue-300" href="${href}">${text}</a></p>`;
             });
         })
     </script>

@@ -133,7 +133,7 @@
         @endif
         <div class="flex flex-wrap mt-6 -mx-3">
             <div class="w-full px-3">
-                <button class="flex items-center w-full text-white bg-teal-500 btn hover:bg-teal-400" type="submit">
+                <button class="flex items-center w-full text-white bg-blue-500 btn hover:bg-blue-300" type="submit">
                     <span>Book</span>
                     <svg class="w-3 h-3 mt-px ml-2 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                         <path class="fill-current"

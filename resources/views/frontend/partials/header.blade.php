@@ -61,7 +61,7 @@
                     <!-- Desktop CTA on the right -->
                     <ul class="flex flex-wrap items-center justify-end">
                         <li>
-                            <a class="ml-6 text-white bg-teal-500 btn-sm hover:bg-teal-400"
+                            <a class="ml-6 text-white bg-blue-500 btn-sm hover:bg-blue-300"
                                 href="{{ route('book.appointment') }}">Book Appointment</a>
                         </li>
                     </ul>
@@ -142,7 +142,7 @@
                                         href="{{ route('contact.us') }}">Contact Us</a>
                                 </li>
                                 <li>
-                                    <a class="ml-6 text-white bg-teal-500 btn-sm hover:bg-teal-400"
+                                    <a class="ml-6 text-white bg-blue-500 btn-sm hover:bg-blue-300"
                                         href="{{ route('book.appointment') }}">Book Appointment</a>
                                 </li>
                             </ul>

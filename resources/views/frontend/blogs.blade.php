@@ -14,7 +14,7 @@
 
                 @if (Jenssegers\Agent\Facades\Agent::isMobile() || Jenssegers\Agent\Facades\Agent::isTablet())
                     <div class="flex flex-wrap items-center justify-end mb-4">
-                        <a class="ml-6 text-right text-white bg-teal-500 btn-sm hover:bg-teal-400"
+                        <a class="ml-6 text-right text-white bg-blue-500 btn-sm hover:bg-blue-300"
                             href="{{ route('book.appointment') }}">Book
                             Appointment</a>
                     </div>
@@ -56,7 +56,7 @@
                 <div class="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4" data-aos-id-featposts>
 
                     @php
-                        $colors = ['bg-teal-500', 'bg-purple-500', 'bg-indigo-500', 'bg-pink-500'];
+                        $colors = ['bg-teal-500', 'bg-purple-500', 'bg-indigo-500', 'bg-pink-500', 'bg-blue-500'];
                     @endphp
                     <!-- 1st article -->
                     @foreach ($next_top_four as $item)
