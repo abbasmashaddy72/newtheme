@@ -11,7 +11,7 @@
         data-aos-id-featbl>
 
         @foreach ($services as $item)
-            <div class="relative duration-300 hover:bg-black hover:scale-105">
+            <div class="relative duration-300 bg-black rounded-lg hover:scale-105">
                 <a href="{{ route('single-service', ['id' => $item->id]) }}">
                     <div>
                         <div class="absolute bottom-0 left-0 p-6">
@@ -27,7 +27,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hover:opacity-50 hover:rounded-lg">
+                    <div class="opacity-50">
                         <img src="{{ asset('storage/' . $item->image . '') }}"
                             class="object-cover w-full rounded-lg h-96" alt="{{ $item->title }}" />
                     </div>

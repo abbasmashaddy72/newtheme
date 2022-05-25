@@ -15,7 +15,6 @@ class HomeController extends Controller
 {
     public function __construct()
     {
-        view()->share('name', Helper::get_static_option('name'));
         view()->share('logo', Helper::get_static_option('logo'));
         view()->share('twitter', Helper::get_static_option('twitter'));
         view()->share('facebook', Helper::get_static_option('facebook'));
